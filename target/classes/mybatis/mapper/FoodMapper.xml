@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scidiet.scidiet.mapper.FoodMapper" >
+  <resultMap id="BaseResultMap" type="com.scidiet.scidiet.model.Food" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="nutrition1" property="nutrition1" jdbcType="DOUBLE" />
+    <result column="nutrition2" property="nutrition2" jdbcType="DOUBLE" />
+    <result column="nutrition3" property="nutrition3" jdbcType="DOUBLE" />
+    <result column="nutrition4" property="nutrition4" jdbcType="DOUBLE" />
+    <result column="nutrition5" property="nutrition5" jdbcType="DOUBLE" />
+    <result column="nutrition6" property="nutrition6" jdbcType="DOUBLE" />
+    <result column="nutrition7" property="nutrition7" jdbcType="DOUBLE" />
+    <result column="nutrition8" property="nutrition8" jdbcType="DOUBLE" />
+    <result column="nutrition9" property="nutrition9" jdbcType="DOUBLE" />
+    <result column="nutrition10" property="nutrition10" jdbcType="DOUBLE" />
+    <result column="nutrition11" property="nutrition11" jdbcType="DOUBLE" />
+    <result column="location" property="location" jdbcType="VARCHAR" />
+    <result column="is_dinner" property="isDinner" jdbcType="INTEGER" />
+    <result column="available" property="available" jdbcType="INTEGER" />
+    <result column="taste" property="taste" jdbcType="VARCHAR" />
+    <result column="image_location" property="imageLocation" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, nutrition1, nutrition2, nutrition3, nutrition4, nutrition5, nutrition6, 
+    nutrition7, nutrition8, nutrition9, nutrition10, nutrition11, location, is_dinner, 
+    available, taste, image_location
+  </sql>
+  <insert id="insertSelective" parameterType="com.scidiet.scidiet.model.Food" >
+    insert into food
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="nutrition1 != null" >
+        nutrition1,
+      </if>
+      <if test="nutrition2 != null" >
+        nutrition2,
+      </if>
+      <if test="nutrition3 != null" >
+        nutrition3,
+      </if>
+      <if test="nutrition4 != null" >
+        nutrition4,
+      </if>
+      <if test="nutrition5 != null" >
+        nutrition5,
+      </if>
+      <if test="nutrition6 != null" >
+        nutrition6,
+      </if>
+      <if test="nutrition7 != null" >
+        nutrition7,
+      </if>
+      <if test="nutrition8 != null" >
+        nutrition8,
+      </if>
+      <if test="nutrition9 != null" >
+        nutrition9,
+      </if>
+      <if test="nutrition10 != null" >
+        nutrition10,
+      </if>
+      <if test="nutrition11 != null" >
+        nutrition11,
+      </if>
+      <if test="location != null" >
+        location,
+      </if>
+      <if test="isDinner != null" >
+        is_dinner,
+      </if>
+      <if test="available != null" >
+        available,
+      </if>
+      <if test="taste != null" >
+        taste,
+      </if>
+      <if test="imageLocation != null" >
+        image_location,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="nutrition1 != null" >
+        #{nutrition1,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition2 != null" >
+        #{nutrition2,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition3 != null" >
+        #{nutrition3,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition4 != null" >
+        #{nutrition4,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition5 != null" >
+        #{nutrition5,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition6 != null" >
+        #{nutrition6,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition7 != null" >
+        #{nutrition7,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition8 != null" >
+        #{nutrition8,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition9 != null" >
+        #{nutrition9,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition10 != null" >
+        #{nutrition10,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition11 != null" >
+        #{nutrition11,jdbcType=DOUBLE},
+      </if>
+      <if test="location != null" >
+        #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="isDinner != null" >
+        #{isDinner,jdbcType=INTEGER},
+      </if>
+      <if test="available != null" >
+        #{available,jdbcType=INTEGER},
+      </if>
+      <if test="taste != null" >
+        #{taste,jdbcType=VARCHAR},
+      </if>
+      <if test="imageLocation != null" >
+        #{imageLocation,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.scidiet.scidiet.model.Food" >
+    update food
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="nutrition1 != null" >
+        nutrition1 = #{nutrition1,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition2 != null" >
+        nutrition2 = #{nutrition2,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition3 != null" >
+        nutrition3 = #{nutrition3,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition4 != null" >
+        nutrition4 = #{nutrition4,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition5 != null" >
+        nutrition5 = #{nutrition5,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition6 != null" >
+        nutrition6 = #{nutrition6,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition7 != null" >
+        nutrition7 = #{nutrition7,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition8 != null" >
+        nutrition8 = #{nutrition8,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition9 != null" >
+        nutrition9 = #{nutrition9,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition10 != null" >
+        nutrition10 = #{nutrition10,jdbcType=DOUBLE},
+      </if>
+      <if test="nutrition11 != null" >
+        nutrition11 = #{nutrition11,jdbcType=DOUBLE},
+      </if>
+      <if test="location != null" >
+        location = #{location,jdbcType=VARCHAR},
+      </if>
+      <if test="isDinner != null" >
+        is_dinner = #{isDinner,jdbcType=INTEGER},
+      </if>
+      <if test="available != null" >
+        available = #{available,jdbcType=INTEGER},
+      </if>
+      <if test="taste != null" >
+        taste = #{taste,jdbcType=VARCHAR},
+      </if>
+      <if test="imageLocation != null" >
+        image_location = #{imageLocation,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
