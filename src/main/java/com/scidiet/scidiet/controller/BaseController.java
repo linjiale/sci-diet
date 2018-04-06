@@ -7,6 +7,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.xml.ws.spi.http.HttpContext;
 
 /**
  * Created by linjiale on 2017/7/21.
@@ -19,6 +20,7 @@ public class BaseController extends AuthenticationRequiredController {
 
     @Autowired
     protected HttpServletResponse servletResponse;
+
 
     public int getUserId() {
         HttpSession session = servletRequest.getSession();
