@@ -1,31 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+
+    <title>Register</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
 </head>
-<body>
 
-<input type="text" name="account" id="account"   placeholder="Username">
+<body class="gray-bg">
 
-<input type="password" name="password" id="password" placeholder="Password">
+<div class="middle-box text-center loginscreen   animated fadeInDown">
+    <div>
+        <div class="logo-name">
 
-<input type="text" name="name" id="name" placeholder="Name">
+            Sci
 
-<input type="email" name="email" id="email" placeholder="Email">
+        </div>
+        <h2>Register to Sci-diet</h2>
+        <p>Create account to see it in action.</p>
+        <form class="m-t" role="form" action="login.html">
+            <div class="form-group">
+                <input type="text" class="form-control" name="account" id="account"   placeholder="Username" required="">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required="">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password" required="">
+            </div>
+            <div class="form-group">
+                <input type="text" name="name" id="name" placeholder="Name" class="form-control" >
+            </div>
+            <div class="form-group">
+                <input type="text" name="phone" id="phone" placeholder="Phone" class="form-control">
+            </div>
+            <div class="form-group">
+                <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Agree the terms and policy </label></div>
+            </div>
+            <button type="submit" onclick="register();return false;" class="btn btn-primary block full-width m-b">Register</button>
 
-<input type="text" name="phone" id="phone" placeholder="Phone">
-<button type="button" onclick="register();return false;">register</button>
+            <p class="text-muted text-center"><small>Already have an account?</small></p>
+            <a class="btn btn-sm btn-white btn-block" href="login.html">Login</a>
+        </form>
+        </br>
+        </br>
+    </div>
+</div>
 
-
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    });
+</script>
 </body>
+
 </html>
-<script type="text/javascript" src="../assets/js/jquery-2.1.0.js" ></script>
-<script type="text/javascript" src="../assets/js/amazeui.min.js"></script>
-<script type="text/javascript" src="../assets/js/app.js" ></script>
-<script type="text/javascript" src="../assets/js/blockUI.js" ></script>
+
+
+
+<!DOCTYPE html>
+
 <script type="text/javascript">
     function register() {
         var account = $("#account").val();

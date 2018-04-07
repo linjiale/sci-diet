@@ -36,6 +36,26 @@ public class UserController extends BaseController {
         return "login";
     }
 
+    @RequestMapping(value = "/layouts")
+    public String layouts(Map<String, Object> model) {
+        return "layouts";
+    }
+
+    @RequestMapping(value = "/metrics")
+    public String metrics(Map<String, Object> model) {
+        return "metrics";
+    }
+
+    @RequestMapping(value = "/profile")
+    public String profile(Map<String, Object> model) {
+        return "profile";
+    }
+
+    @RequestMapping(value = "/recommend")
+    public String recommend(Map<String, Object> model) {
+        return "recommend";
+    }
+
     @RequestMapping(value = "/logout")
     public String logout(Map<String, Object> model) {
         HttpSession session = servletRequest.getSession();

@@ -1,26 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+
+    <title>Login</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
 </head>
-<body>
 
-<input type="text" name="account" id="account"   placeholder="Username">
+<body class="gray-bg">
 
-<input type="password" name="password" id="password" placeholder="Password">
+<div class="middle-box text-center loginscreen animated fadeInDown">
+    <div>
+        <div class="logo-name">
 
-<button type="button" onclick="login();return false;">login</button>
+            Sci
 
+        </div>
+        <h2>Welcome to Sci-diet</h2>
+
+        <p>Login in. To see it in action.</p>
+        <form class="m-t" role="form" action="index.html">
+            <div class="form-group">
+                <input type="text" name="account" id="account"   placeholder="Username" class="form-control" required="">
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" id="password" placeholder="Password" class="form-control"  required="">
+            </div>
+            <button type="submit" onclick="login();return false;" class="btn btn-primary block full-width m-b">Login</button>
+
+            <a href="#"><small>Forgot password?</small></a>
+            <p class="text-muted text-center"><small>Do not have an account?</small></p>
+            <a class="btn btn-sm btn-white btn-block" href="register.html">Create an account</a>
+        </form>
+
+    </div>
+</div>
+</br>
+</br>
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
-<script type="text/javascript" src="../assets/js/jquery-2.1.0.js" ></script>
-<script type="text/javascript" src="../assets/js/amazeui.min.js"></script>
-<script type="text/javascript" src="../assets/js/app.js" ></script>
-<script type="text/javascript" src="../assets/js/blockUI.js" ></script>
 <script type="text/javascript">
     function login() {
         var account = $("#account").val();
