@@ -56,20 +56,23 @@ CREATE TABLE `user` (
   `name` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `phone` varchar(255) DEFAULT NULL,
-  `sex` varchar(255) DEFAULT NULL,
-  `age` int(11) DEFAULT NULL,
-  `BMI` double(255,0) DEFAULT NULL,
-  `work_type` varchar(255) DEFAULT NULL,
-  `allergy` varchar(255) DEFAULT NULL,
-  `love_food` varchar(255) DEFAULT NULL,
-  `hate_food` varchar(255) DEFAULT NULL,
+  `sex` varchar(255) DEFAULT '',
+  `age` int(11) DEFAULT '0',
+  `BMI` double(255,0) DEFAULT '0',
+  `work_type` varchar(255) DEFAULT '',
+  `allergy` varchar(255) DEFAULT '',
+  `love_food` varchar(255) DEFAULT '',
+  `hate_food` varchar(255) DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '123', '123123', 'Lin', '123@123.com', '1234', 'male', '123', '123', '轻脑力劳动', '123123', '123', '123');
-INSERT INTO `user` VALUES ('2', '123123', '123123', '123123', '111111@11111.com', '123123123123', null, null, null, null, null, null, null);
-INSERT INTO `user` VALUES ('3', '123', '213123', '123123', '1111@222.com', '111333', null, null, null, null, null, null, null);
-INSERT INTO `user` VALUES ('4', 'xin', '123456', 'xinxinxin', '111@333.com', '123123213213123123', null, null, null, null, null, null, null);
+INSERT INTO `user` VALUES ('1', 'linjiale', '123456', 'Lin', '123@123.com', '1234', 'male', '123', '123', '轻脑力劳动', '123123', '123', '123');
+INSERT INTO `user` VALUES ('2', '123123', '123123', '123123', '111111@11111.com', '123123123123', '', '0', '0', '', '', '', '');
+INSERT INTO `user` VALUES ('3', '123', '213123', '123123', '1111@222.com', '111333', '', '0', '0', '', '', '', '');
+INSERT INTO `user` VALUES ('4', 'xin', '123456', 'xinxinxin', '111@333.com', '123123213213123123', '', '0', '0', ' ', '', '', '');
+INSERT INTO `user` VALUES ('5', '李熊', '15318713692woain', '李欣蓉', '13162189698@163.com', '13162189698', 'male', '0', '0', ' ', '', '', '');
+INSERT INTO `user` VALUES ('6', '淳于懿', 'abigale197312', 'abigale', '15900681805@163.com', '15900681805', '', '0', '0', ' ', '', '', '');
+INSERT INTO `user` VALUES ('7', 'aa', 'sxy', 'aa', 'aa@163.com', '1', '', '0', '0', '', '', '', '');

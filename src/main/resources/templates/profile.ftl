@@ -24,11 +24,13 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg"/>
                              </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                            <span class="clear"> <span class="block m-t-xs"> <strong
+                                    class="font-bold">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Art Director <b
+                                    class="caret"></b></span> </span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a href="profile">Profile</a></li>
                             <li><a href="contacts">Contacts</a></li>
@@ -54,7 +56,7 @@
                 </li>
 
                 <li>
-                    <a href="metrics"><i class="fa fa-pie-chart"></i> <span class="nav-label">推荐结果</span>  </a>
+                    <a href="metrics"><i class="fa fa-pie-chart"></i> <span class="nav-label">推荐结果</span> </a>
                 </li>
                 <li class="active">
                     <a href="profile"><i class="fa fa-flask"></i> <span class="nav-label">个人中心</span></a>
@@ -68,120 +70,42 @@
         <div class="row border-bottom">
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
-                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i>
+                    </a>
                     <form role="search" class="navbar-form-custom" action="search_results">
                         <div class="form-group">
-                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                            <input type="text" placeholder="Search for something..." class="form-control"
+                                   name="top-search" id="top-search">
                         </div>
                     </form>
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
-                        <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
+                        <span class="m-r-sm text-muted welcome-message">Welcome to Sci-diet.</span>
                     </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                            <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                <#if userId!=0>
+                    <li>
+                        <a class="right-sidebar-toggle">
+                            <i class="fa fa-tasks"> </i> 你好 ${user.name}
                         </a>
-                        <ul class="dropdown-menu dropdown-messages">
-                            <li>
-                                <div class="dropdown-messages-box">
-                                    <a href="profile" class="pull-left">
-                                        <img alt="image" class="img-circle" src="img/a7.jpg">
-                                    </a>
-                                    <div class="media-body">
-                                        <small class="pull-right">46h ago</small>
-                                        <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
-                                        <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="dropdown-messages-box">
-                                    <a href="profile" class="pull-left">
-                                        <img alt="image" class="img-circle" src="img/a4.jpg">
-                                    </a>
-                                    <div class="media-body ">
-                                        <small class="pull-right text-navy">5h ago</small>
-                                        <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
-                                        <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="dropdown-messages-box">
-                                    <a href="profile" class="pull-left">
-                                        <img alt="image" class="img-circle" src="img/profile.jpg">
-                                    </a>
-                                    <div class="media-body ">
-                                        <small class="pull-right">23h ago</small>
-                                        <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
-                                        <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="text-center link-block">
-                                    <a href="mailbox">
-                                        <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
                     </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                            <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-alerts">
-                            <li>
-                                <a href="mailbox">
-                                    <div>
-                                        <i class="fa fa-envelope fa-fw"></i> You have 16 messages
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="profile">
-                                    <div>
-                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                        <span class="pull-right text-muted small">12 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="grid_options">
-                                    <div>
-                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="text-center link-block">
-                                    <a href="notifications">
-                                        <strong>See All Alerts</strong>
-                                        <i class="fa fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-
-
                     <li>
                         <a href="login">
-                            <i class="fa fa-sign-out"></i> Log out
+
+                            <i class="fa fa-sign-out"></i> 注销
                         </a>
                     </li>
+                <#else>
+                    <li>
+                        <a href="login">
+                            <i class="fa fa-sign-out"></i> 登陆
+                        </a>
+                    </li>
+                </#if>
+
+
                 </ul>
+
 
             </nav>
         </div>
@@ -196,52 +120,53 @@
         </div>
         <div class="wrapper wrapper-content">
             <div class="row animated fadeInRight">
-                <div class="col-md-4">
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <h5>Profile Detail</h5>
-                        </div>
-                        <div>
-                            <div class="ibox-content no-padding border-left-right">
-                                <img alt="image" class="img-responsive" src="img/profile_big.jpg">
-                            </div>
-                            <div class="ibox-content profile-content">
-                                <h4><strong>Monica Smith</strong></h4>
-                                <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
-                                <h5>
-                                    About me
-                                </h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.
-                                </p>
-                                <div class="row m-t-lg">
-                                    <div class="col-md-4">
-                                        <span class="bar">5,3,9,6,5,9,7,3,5,2</span>
-                                        <h5><strong>169</strong> Posts</h5>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <span class="line">5,3,9,6,5,9,7,3,5,2</span>
-                                        <h5><strong>28</strong> Following</h5>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <span class="bar">5,3,2,-1,-3,-2,2,3,5,2</span>
-                                        <h5><strong>240</strong> Followers</h5>
-                                    </div>
-                                </div>
-                                <div class="user-button">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <button type="button" class="btn btn-primary btn-sm btn-block"><i class="fa fa-envelope"></i> Send Message</button>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <button type="button" class="btn btn-default btn-sm btn-block"><i class="fa fa-coffee"></i> Buy a coffee</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <#--<div class="col-md-4">-->
+            <#--<div class="ibox float-e-margins">-->
+            <#--<div class="ibox-title">-->
+            <#--<h5>Profile Detail</h5>-->
+            <#--</div>-->
+            <#--<div>-->
+            <#--<div class="ibox-content no-padding border-left-right">-->
+            <#--<img alt="image" class="img-responsive" src="img/profile_big.jpg">-->
+            <#--</div>-->
+            <#--<div class="ibox-content profile-content">-->
+            <#--<h4><strong>Monica Smith</strong></h4>-->
+            <#--<p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>-->
+            <#--<h5>-->
+            <#--About me-->
+            <#--</h5>-->
+            <#--<p>-->
+            <#--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.-->
+            <#--</p>-->
+            <#--<div class="row m-t-lg">-->
+            <#--<div class="col-md-4">-->
+            <#--<span class="bar">5,3,9,6,5,9,7,3,5,2</span>-->
+            <#--<h5><strong>169</strong> Posts</h5>-->
+            <#--</div>-->
+            <#--<div class="col-md-4">-->
+            <#--<span class="line">5,3,9,6,5,9,7,3,5,2</span>-->
+            <#--<h5><strong>28</strong> Following</h5>-->
+            <#--</div>-->
+            <#--<div class="col-md-4">-->
+            <#--<span class="bar">5,3,2,-1,-3,-2,2,3,5,2</span>-->
+            <#--<h5><strong>240</strong> Followers</h5>-->
+            <#--</div>-->
+            <#--</div>-->
+            <#--<div class="user-button">-->
+            <#--<div class="row">-->
+            <#--<div class="col-md-6">-->
+            <#--<button type="button" class="btn btn-primary btn-sm btn-block"><i class="fa fa-envelope"></i> Send Message</button>-->
+            <#--</div>-->
+            <#--<div class="col-md-6">-->
+            <#--<button type="button" class="btn btn-default btn-sm btn-block"><i class="fa fa-coffee"></i> Buy a coffee</button>-->
+            <#--</div>-->
+            <#--</div>-->
+            <#--</div>-->
+            <#--</div>-->
+            <#--</div>-->
+            <#--</div>-->
+            <#--</div>-->
+            <#if userId !=0>
                 <div class="col-md-8">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
@@ -264,6 +189,7 @@
                                 </a>
                             </div>
                         </div>
+
                         <div class="ibox-content">
 
                             <div>
@@ -273,7 +199,7 @@
 
                                         <div class="media-body ">
                                             <!-- <small class="pull-right text-navy">1m ago</small> -->
-                                            <strong>性别：</strong>男
+                                            <strong>性别：</strong>${user.account}
                                             <!--  <div class="actions">
                                                  <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
                                                  <a class="btn btn-xs btn-danger"><i class="fa fa-heart"></i> Love</a>
@@ -285,7 +211,7 @@
 
                                         <div class="media-body ">
 
-                                            <strong>年龄：</strong> 20<br>
+                                            <strong>年龄：</strong> ${user.age}<br>
 
 
                                         </div>
@@ -295,17 +221,7 @@
 
                                         <div class="media-body ">
 
-                                            <strong>BMI：</strong> 20
-
-
-
-                                        </div>
-                                    </div>
-                                    <div class="feed-element">
-
-                                        <div class="media-body ">
-
-                                            <strong>工作类型：</strong> 中等体力劳动 <strong>
+                                            <strong>BMI：</strong> ${user.bmi}
 
 
                                         </div>
@@ -314,7 +230,8 @@
 
                                         <div class="media-body ">
 
-                                            <strong>过敏原：</strong>
+                                            <strong>工作类型：</strong>  ${user.workType}
+
 
                                         </div>
                                     </div>
@@ -322,7 +239,7 @@
 
                                         <div class="media-body ">
 
-                                            <strong>经常吃（喜爱）的食物：</strong>
+                                            <strong>过敏原：</strong> ${user.allergy}
 
                                         </div>
                                     </div>
@@ -330,7 +247,15 @@
 
                                         <div class="media-body ">
 
-                                            <strong>很少吃（厌恶）的食物：</strong>
+                                            <strong>经常吃（喜爱）的食物：</strong> ${user.loveFood}
+
+                                        </div>
+                                    </div>
+                                    <div class="feed-element">
+
+                                        <div class="media-body ">
+
+                                            <strong>很少吃（厌恶）的食物：</strong> ${user.hateFood}
                                         </div>
                                     </div>
 
@@ -341,9 +266,15 @@
                             </div>
 
                         </div>
+
                     </div>
 
                 </div>
+            <#else>
+                <a href="login">请登陆</a>
+
+            </#if>
+
             </div>
         </div>
         <div class="footer">
@@ -357,7 +288,6 @@
 
     </div>
 </div>
-
 
 
 <!-- Mainly scripts -->
