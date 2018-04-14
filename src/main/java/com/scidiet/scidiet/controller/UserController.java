@@ -55,6 +55,10 @@ public class UserController extends BaseController {
         return "recommend";
     }
 
+    @RequestMapping(value = "/modify")
+    public String modify(Map<String,Object> model){
+        return "modify";
+    }
     @RequestMapping(value = "/logout")
     public String logout(Map<String, Object> model) {
         HttpSession session = servletRequest.getSession();
@@ -131,13 +135,13 @@ public class UserController extends BaseController {
     }
 
     @RequestMapping(value = "/edit")
-    public String edit(@RequestParam("sex") String sex,
-                                 @RequestParam("age") String age,
-                                 @RequestParam("BMI") String BMI,
-                                 @RequestParam("work_type") String work_type,
-                                 @RequestParam("allergy") String allergy,
-                                 @RequestParam("love_food") String love_food,
-                                 @RequestParam("hate_food") String hate_food) {
+    public String edit(@RequestParam(value = "sex",defaultValue = "") String sex,
+                                 @RequestParam(value = "age",defaultValue = "0") String age,
+                                 @RequestParam(value = "BMI",defaultValue = "0.0") String BMI,
+                                 @RequestParam(value = "work_type",defaultValue = "") String work_type,
+                                 @RequestParam(value ="allergy",defaultValue = "") String allergy,
+                                 @RequestParam(value ="love_food",defaultValue = "") String love_food,
+                                 @RequestParam(value ="hate_food",defaultValue = "") String hate_food) {
         User user = userMapper.selectByPrimaryKey(getUserId());
         user.setSex(sex);
         user.setAge(Integer.valueOf(age));

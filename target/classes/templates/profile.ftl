@@ -261,7 +261,7 @@
 
                                 </div>
 
-                                <button class="btn btn-primary btn-block m">修改个人信息</button>
+                                <button class="btn btn-primary btn-block m" onclick="window.location.href='modify' ">修改个人信息</button>
 
                             </div>
 
@@ -272,7 +272,7 @@
                 </div>
             <#else>
                 <a href="login">请登陆</a>
-        
+
             </#if>
 
             </div>

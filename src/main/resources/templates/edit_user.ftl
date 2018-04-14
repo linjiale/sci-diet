@@ -45,7 +45,7 @@ ${user.name}
     <input type="text" name="hate_food">
     <br>
 
-    <input type="submit" value="提交">
+    <input type="submit"  value="提交">
     <br>
 </form>
 </form>
@@ -56,4 +56,5 @@ ${user.name}
 <script type="text/javascript" src="../assets/js/app.js"></script>
 <script type="text/javascript" src="../assets/js/blockUI.js"></script>
 <script type="text/javascript">
+
 </script>
