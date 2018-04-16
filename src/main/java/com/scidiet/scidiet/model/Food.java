@@ -37,6 +37,8 @@ public class Food {
 
     private String imageLocation;
 
+    private Double price;
+
     public Integer getId() {
         return id;
     }
@@ -179,5 +181,13 @@ public class Food {
 
     public void setImageLocation(String imageLocation) {
         this.imageLocation = imageLocation == null ? null : imageLocation.trim();
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
     }
 }

@@ -20,11 +20,12 @@
     <result column="available" property="available" jdbcType="INTEGER" />
     <result column="taste" property="taste" jdbcType="VARCHAR" />
     <result column="image_location" property="imageLocation" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DOUBLE" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, name, nutrition1, nutrition2, nutrition3, nutrition4, nutrition5, nutrition6, 
     nutrition7, nutrition8, nutrition9, nutrition10, nutrition11, location, is_dinner, 
-    available, taste, image_location
+    available, taste, image_location, price
   </sql>
   <insert id="insertSelective" parameterType="com.scidiet.scidiet.model.Food" >
     insert into food
@@ -83,6 +84,9 @@
       <if test="imageLocation != null" >
         image_location,
       </if>
+      <if test="price != null" >
+        price,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -139,6 +143,9 @@
       <if test="imageLocation != null" >
         #{imageLocation,jdbcType=VARCHAR},
       </if>
+      <if test="price != null" >
+        #{price,jdbcType=DOUBLE},
+      </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.scidiet.scidiet.model.Food" >
@@ -194,6 +201,9 @@
       </if>
       <if test="imageLocation != null" >
         image_location = #{imageLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=DOUBLE},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}

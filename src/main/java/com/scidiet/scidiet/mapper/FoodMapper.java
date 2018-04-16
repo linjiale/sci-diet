@@ -1,11 +1,9 @@
 package com.scidiet.scidiet.mapper;
 
 import com.scidiet.scidiet.model.Food;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.ResultMap;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
+
+import java.util.List;
 
 public interface FoodMapper {
     @Delete({
@@ -23,7 +21,8 @@ public interface FoodMapper {
         "nutrition9, nutrition10, ",
         "nutrition11, location, ",
         "is_dinner, available, ",
-        "taste, image_location)",
+        "taste, image_location, ",
+        "price)",
         "values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, ",
         "#{nutrition1,jdbcType=DOUBLE}, #{nutrition2,jdbcType=DOUBLE}, ",
         "#{nutrition3,jdbcType=DOUBLE}, #{nutrition4,jdbcType=DOUBLE}, ",
@@ -32,7 +31,8 @@ public interface FoodMapper {
         "#{nutrition9,jdbcType=DOUBLE}, #{nutrition10,jdbcType=DOUBLE}, ",
         "#{nutrition11,jdbcType=DOUBLE}, #{location,jdbcType=VARCHAR}, ",
         "#{isDinner,jdbcType=INTEGER}, #{available,jdbcType=INTEGER}, ",
-        "#{taste,jdbcType=VARCHAR}, #{imageLocation,jdbcType=VARCHAR})"
+        "#{taste,jdbcType=VARCHAR}, #{imageLocation,jdbcType=VARCHAR}, ",
+        "#{price,jdbcType=DOUBLE})"
     })
     int insert(Food record);
 
@@ -42,7 +42,7 @@ public interface FoodMapper {
         "select",
         "id, name, nutrition1, nutrition2, nutrition3, nutrition4, nutrition5, nutrition6, ",
         "nutrition7, nutrition8, nutrition9, nutrition10, nutrition11, location, is_dinner, ",
-        "available, taste, image_location",
+        "available, taste, image_location, price",
         "from food",
         "where id = #{id,jdbcType=INTEGER}"
     })
@@ -69,8 +69,14 @@ public interface FoodMapper {
           "is_dinner = #{isDinner,jdbcType=INTEGER},",
           "available = #{available,jdbcType=INTEGER},",
           "taste = #{taste,jdbcType=VARCHAR},",
-          "image_location = #{imageLocation,jdbcType=VARCHAR}",
+          "image_location = #{imageLocation,jdbcType=VARCHAR},",
+          "price = #{price,jdbcType=DOUBLE}",
         "where id = #{id,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(Food record);
+    @Select({
+            "SELECT * FROM food"
+    })
+    @ResultType(Food.class)
+    List<Food> getAllFood();
 }

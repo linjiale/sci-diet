@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -24,11 +23,13 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg"/>
                              </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                            <span class="clear"> <span class="block m-t-xs"> <strong
+                                    class="font-bold">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Art Director <b
+                                    class="caret"></b></span> </span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a href="profile">Profile</a></li>
                             <li><a href="contacts">Contacts</a></li>
@@ -53,8 +54,8 @@
 
                 </li>
 
-                <li >
-                    <a href="metrics"><i class="fa fa-pie-chart"></i> <span class="nav-label">推荐结果</span>  </a>
+                <li>
+                    <a href="metrics"><i class="fa fa-pie-chart"></i> <span class="nav-label">推荐结果</span> </a>
                 </li>
                 <li>
                     <a href="profile"><i class="fa fa-flask"></i> <span class="nav-label">个人中心</span></a>
@@ -68,10 +69,12 @@
         <div class="row border-bottom">
             <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
-                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i>
+                    </a>
                     <form role="search" class="navbar-form-custom" action="search_results">
                         <div class="form-group">
-                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                            <input type="text" placeholder="Search for something..." class="form-control"
+                                   name="top-search" id="top-search">
                         </div>
                     </form>
                 </div>
@@ -105,55 +108,46 @@
 
             </nav>
         </div>
-        <div class="row wrapper border-bottom white-bg page-heading">
-            <div class="col-lg-9">
-                <h2>饮食需求</h2>
-                <form>
-                    <input type="radio" name="sex" value="male">减肥
+        <form action="/recommendAction">
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-9">
+                    <h2>饮食需求</h2>
 
-                    <input type="radio" name="sex" value="female">增肌
-                    <input type="radio" name="sex" value="female">塑形
-                    <input type="radio" name="sex" value="female">美容
-                    <input type="radio" name="sex" value="female">加强营养
-                </form>
+                    <input type="radio" name="demand" value="减肥">减肥
+                    <input type="radio" name="demand" value="增肌">增肌
+                    <input type="radio" name="demand" value="塑形">塑形
+                    <input type="radio" name="demand" value="美容">美容
+                    <input type="radio" name="demand" value="加强营养">加强营养
+
+                </div>
             </div>
-        </div>
-        <div class="row wrapper border-bottom white-bg page-heading">
-            <div class="col-lg-9">
-                <h2>饮食偏好</h2>
-                <form>
-                    <input type="radio" name="sex" value="male">清淡
-
-                    <input type="radio" name="sex" value="female">偏甜
-                    <input type="radio" name="sex" value="female">偏辣
-                    <input type="radio" name="sex" value="female">偏咸
-                    <input type="radio" name="sex" value="female">无特殊要求
-                </form>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-9">
+                    <h2>饮食偏好</h2>
+                    <input type="radio" name="preference" value="清淡">清淡
+                    <input type="radio" name="preference" value="偏甜">偏甜
+                    <input type="radio" name="preference" value="偏辣">偏辣
+                    <input type="radio" name="preference" value="偏咸">偏咸
+                    <input type="radio" name="preference" value="无特殊要求">无特殊要求
+                </div>
             </div>
-        </div>
-        <div class="row wrapper border-bottom white-bg page-heading">
-            <div class="col-lg-9">
-                <h2>就餐地点</h2>
-                <form>
-                    <input type="radio" name="sex" value="male">冬月厅（河东）
-
-                    <input type="radio" name="sex" value="female">冬日厅（河西）
-                    <input type="radio" name="sex" value="female">夏雨厅
-                    <input type="radio" name="sex" value="female">秋实阁
-
-                </form>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-9">
+                    <h2>就餐地点</h2>
+                    <input type="radio" name="place" value="冬月厅（河东）">冬月厅（河东）
+                    <input type="radio" name="place" value="冬日厅（河西）">冬日厅（河西）
+                    <input type="radio" name="place" value="夏雨厅">夏雨厅
+                    <input type="radio" name="place" value="秋实阁">秋实阁
+                </div>
             </div>
-        </div>
-        <div class="row wrapper border-bottom white-bg page-heading">
-            <div class="col-lg-9">
-                <h2>单餐预算上限</h2>
-                <form>
-                    <input type="" name="">
-
-                </form>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-9">
+                    <h2>单餐预算上限</h2>
+                    <input type="text" name="maxPrice">
+                </div>
             </div>
-        </div>
-        <a href="metrics"><button type="button" class="btn btn-block btn-outline btn-primary">开启智能推荐</button></a>
+            <button type="submit" class="btn btn-block btn-outline btn-primary">开启智能推荐</button>
+            </a></form>
         <div class="footer">
             <div class="pull-right">
                 10GB of <strong>250GB</strong> Free.
@@ -184,9 +178,9 @@
 <script src="js/plugins/pace/pace.min.js"></script>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
 
-        var sparklineCharts = function(){
+        var sparklineCharts = function () {
             $("#sparkline1").sparkline([34, 43, 43, 35, 44, 32, 44, 52], {
                 type: 'line',
                 width: '100%',
@@ -246,7 +240,7 @@
 
         var sparkResize;
 
-        $(window).resize(function(e) {
+        $(window).resize(function (e) {
             clearTimeout(sparkResize);
             sparkResize = setTimeout(sparklineCharts, 500);
         });

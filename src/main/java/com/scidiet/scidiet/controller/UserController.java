@@ -2,8 +2,11 @@ package com.scidiet.scidiet.controller;
 
 
 import com.scidiet.scidiet.dto.BaseJsonResponse;
+import com.scidiet.scidiet.mapper.FoodMapper;
 import com.scidiet.scidiet.mapper.UserMapper;
+import com.scidiet.scidiet.model.Food;
 import com.scidiet.scidiet.model.User;
+import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,14 +14,20 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping
 public class UserController extends BaseController {
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private FoodMapper foodMapper;
 
     @RequestMapping(value = "/index")
     public String index(Map<String, Object> model) {
@@ -153,4 +162,21 @@ public class UserController extends BaseController {
         userMapper.updateByPrimaryKey(user);
         return "index";
     }
+
+    @RequestMapping(value = "/recommendAction")
+    public String recommendAction(Map<String, Object> model,
+                                  @RequestParam(value = "demand",defaultValue = "") String demand,
+                                  @RequestParam(value = "preference",defaultValue = "") String preference,
+                                  @RequestParam(value = "place",defaultValue = "") String place,
+                                  @RequestParam(value = "maxPrice",defaultValue = "") String maxPrice){
+        List<Food>list = foodMapper.getAllFood();
+        Collections.shuffle(list);
+        User user = userMapper.selectByPrimaryKey(getUserId());
+        list = list.stream().filter(food ->food.getLocation().equals(place)).collect(Collectors.toList());
+
+
+
+        return "metrics";
+    }
+
 }
