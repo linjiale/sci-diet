@@ -6,7 +6,6 @@ import com.scidiet.scidiet.mapper.FoodMapper;
 import com.scidiet.scidiet.mapper.UserMapper;
 import com.scidiet.scidiet.model.Food;
 import com.scidiet.scidiet.model.User;
-import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
