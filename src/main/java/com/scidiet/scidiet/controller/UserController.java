@@ -1,9 +1,12 @@
 package com.scidiet.scidiet.controller;
 
 
+import com.google.common.collect.Lists;
 import com.scidiet.scidiet.dto.BaseJsonResponse;
+import com.scidiet.scidiet.mapper.CanteenAdminMapper;
 import com.scidiet.scidiet.mapper.FoodMapper;
 import com.scidiet.scidiet.mapper.UserMapper;
+import com.scidiet.scidiet.model.CanteenAdmin;
 import com.scidiet.scidiet.model.Food;
 import com.scidiet.scidiet.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +31,9 @@ public class UserController extends BaseController {
     @Autowired
     private FoodMapper foodMapper;
 
+    @Autowired
+    private CanteenAdminMapper canteenAdminMapper;
+
     @RequestMapping(value = "/index")
     public String index(Map<String, Object> model) {
         return "index";
@@ -41,6 +47,11 @@ public class UserController extends BaseController {
     @RequestMapping(value = "/login")
     public String login(Map<String, Object> model) {
         return "login";
+    }
+
+    @RequestMapping(value = "/adminLogin")
+    public String adminLogin(Map<String, Object> model) {
+        return "adminLogin";
     }
 
     @RequestMapping(value = "/layouts")
@@ -67,6 +78,12 @@ public class UserController extends BaseController {
     public String modify(Map<String,Object> model){
         return "modify";
     }
+
+    @RequestMapping(value = "/chooseLunch")
+    public String chooseLunch(Map<String,Object> model){
+        return "chooseLunch";
+    }
+
     @RequestMapping(value = "/logout")
     public String logout(Map<String, Object> model) {
         HttpSession session = servletRequest.getSession();
@@ -117,8 +134,8 @@ public class UserController extends BaseController {
 
     @RequestMapping(value = "/userLogin")
     @ResponseBody
-    public BaseJsonResponse userRegister(@RequestParam("account") String account,
-                                         @RequestParam("password") String password) {
+    public BaseJsonResponse userLogin(@RequestParam("account") String account,
+                                      @RequestParam("password") String password) {
         List<User> list = userMapper.getAllUsers();
         BaseJsonResponse baseJsonResponse = new BaseJsonResponse();
         HttpSession session = servletRequest.getSession();
@@ -128,7 +145,7 @@ public class UserController extends BaseController {
                 if (password.equals(item.getPassword())) {
                     baseJsonResponse.setReturnCode("3.0");
                     baseJsonResponse.setErrorMessage("成功");
-                    session.setAttribute("userId", Integer.valueOf(item.getId()));
+                    session.setAttribute("userId", item.getId());
                     return baseJsonResponse;
                 } else {
                     baseJsonResponse.setReturnCode("2.0");
@@ -142,6 +159,33 @@ public class UserController extends BaseController {
         return baseJsonResponse;
     }
 
+
+    @RequestMapping(value = "/adminLoginFunction")
+    @ResponseBody
+    public BaseJsonResponse adminLoginFunction(@RequestParam("account") String account,
+                                         @RequestParam("password") String password) {
+        List<CanteenAdmin> list = canteenAdminMapper.getAllCanteenAdmin();
+        BaseJsonResponse baseJsonResponse = new BaseJsonResponse();
+        HttpSession session = servletRequest.getSession();
+
+        for (CanteenAdmin item : list) {
+            if (account.equals(item.getAccount())) {
+                if (password.equals(item.getPassword())) {
+                    baseJsonResponse.setReturnCode("3.0");
+                    baseJsonResponse.setErrorMessage("成功");
+                    session.setAttribute("adminId", item.getId());
+                    return baseJsonResponse;
+                } else {
+                    baseJsonResponse.setReturnCode("2.0");
+                    baseJsonResponse.setErrorMessage("失败");
+                    return baseJsonResponse;
+                }
+            }
+        }
+        baseJsonResponse.setReturnCode("1.0");
+        baseJsonResponse.setErrorMessage("失败");
+        return baseJsonResponse;
+    }
     @RequestMapping(value = "/edit")
     public String edit(@RequestParam(value = "sex",defaultValue = "") String sex,
                                  @RequestParam(value = "age",defaultValue = "0") String age,
@@ -172,10 +216,41 @@ public class UserController extends BaseController {
         Collections.shuffle(list);
         User user = userMapper.selectByPrimaryKey(getUserId());
         list = list.stream().filter(food ->food.getLocation().equals(place)).collect(Collectors.toList());
-
-
-
         return "metrics";
     }
+
+
+    @RequestMapping(value = "/getAvailable")
+    public String getAvailable(Map<String, Object> model,
+                               @RequestParam(value = "lunch") String lunch)
+    {
+        HttpSession session = servletRequest.getSession();
+        int adminId = (int) session.getAttribute("adminId");
+        CanteenAdmin canteenAdmin = canteenAdminMapper.selectByPrimaryKey(adminId);
+        int isDinner = lunch.equals("dinner")?1:0;
+        session.setAttribute("isDinner",isDinner);
+        List<Food>list = foodMapper.getAllFood();
+        list = list.stream().filter(food ->(food.getLocation().equals(canteenAdmin.getLocation())&&food.getIsDinner()==isDinner)).collect(Collectors.toList());
+        model.put("list",list);
+        return "getAvailable";
+    }
+    @RequestMapping(value = "/putResult")
+    public String putResult(Map<String, Object> model,
+                               @RequestParam(value = "food") String[] foods)
+    {
+        List<String> foodList = Lists.newArrayList(foods);
+        HttpSession session = servletRequest.getSession();
+        int adminId = (int) session.getAttribute("adminId");
+        CanteenAdmin canteenAdmin = canteenAdminMapper.selectByPrimaryKey(adminId);
+        int isDinner =(int) session.getAttribute("isDinner");
+        List<Food>list = foodMapper.getAllFood();
+        list = list.stream().filter(food ->(food.getLocation().equals(canteenAdmin.getLocation())&&food.getIsDinner()==isDinner)).collect(Collectors.toList());
+        List<Integer>list2 = list.stream().filter(food ->foodList.contains(food.getName())).map(Food::getId).collect(Collectors.toList());
+        foodMapper.updateIsAvailable(list2);
+        list2 = list.stream().filter(food ->!foodList.contains(food.getName())).map(Food::getId).collect(Collectors.toList());
+        foodMapper.updateIsNotAvailable(list2);
+        return "chooseLunch";
+    }
+
 
 }

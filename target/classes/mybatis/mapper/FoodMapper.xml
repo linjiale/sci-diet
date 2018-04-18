@@ -208,4 +208,12 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <update id="updateIsAvailable" >
+    UPDATE  food set available = 1 where id in
+    <foreach collection="list" item="id" open = "(" close=")" separator=",">#{id}</foreach>
+  </update>
+  <update id="updateIsNotAvailable" >
+    UPDATE  food set available = 0 where id in
+    <foreach collection="list" item="id" open = "(" close=")" separator=",">#{id}</foreach>
+  </update>
 </mapper>

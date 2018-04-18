@@ -79,4 +79,7 @@ public interface FoodMapper {
     })
     @ResultType(Food.class)
     List<Food> getAllFood();
+
+    int updateIsAvailable(@Param("list")List<Integer>list);
+    int updateIsNotAvailable(@Param("list")List<Integer>list);
 }
