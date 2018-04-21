@@ -27,29 +27,27 @@
         </div>
         <h2>Register to Sci-diet</h2>
         <p>Create account to see it in action.</p>
-        <form class="m-t" role="form" action="login.html">
+        <form class="m-t" role="form" >
             <div class="form-group">
-                <input type="text" class="form-control" name="account" id="account"   placeholder="Username" required="">
+                <input type="text" class="form-control" name="account" id="account"   placeholder="账号" required="">
             </div>
             <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required="">
+                <input type="email" class="form-control" name="email" id="email" placeholder="邮箱" required="">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" name="password" id="password" placeholder="Password" required="">
+                <input type="password" class="form-control" name="password" id="password" placeholder="密码" required="">
             </div>
             <div class="form-group">
-                <input type="text" name="name" id="name" placeholder="Name" class="form-control" >
+                <input type="text" name="name" id="name" placeholder="名字" class="form-control" >
             </div>
             <div class="form-group">
-                <input type="text" name="phone" id="phone" placeholder="Phone" class="form-control">
+                <input type="text" name="phone" id="phone" placeholder="手机" class="form-control">
             </div>
-            <div class="form-group">
-                <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Agree the terms and policy </label></div>
-            </div>
-            <button type="submit" onclick="register();return false;" class="btn btn-primary block full-width m-b">Register</button>
 
-            <p class="text-muted text-center"><small>Already have an account?</small></p>
-            <a class="btn btn-sm btn-white btn-block" href="login.html">Login</a>
+            <button type="submit" onclick="register();return false;" class="btn btn-primary block full-width m-b">注册</button>
+
+            <p class="text-muted text-center"><small>已经拥有账号？</small></p>
+            <a class="btn btn-sm btn-white btn-block" href="login">登陆</a>
         </form>
         </br>
         </br>
