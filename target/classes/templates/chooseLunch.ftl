@@ -26,7 +26,7 @@
 
         </div>
 
-        <form class="m-t" role="form" action="index.html">
+        <form class="m-t" role="form">
 
             <button type="button" class="btn btn-primary block full-width m-b" onclick="window.location.href='/getAvailable?lunch=lunch'">午餐</button>
             <button type="button" class="btn btn-primary block full-width m-b" onclick="window.location.href='/getAvailable?lunch=dinner'">晚餐</button>

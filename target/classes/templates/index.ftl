@@ -47,7 +47,7 @@
                             <img alt="image" class="img-circle" src="img/profile_small.jpg" />
                              </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">${user.name}</strong>
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">${userName!""}</strong>
                              </span> <span class="text-muted text-xs block">student <b class="caret"></b></span> </span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                         <#if  userId == 0>

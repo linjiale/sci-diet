@@ -28,7 +28,7 @@
         <h2>Welcome to Sci-diet</h2>
 
         <p>Login in. To see it in action.</p>
-        <form class="m-t" role="form" action="index.html">
+        <form class="m-t" role="form" >
             <div class="form-group">
                 <input type="text" name="account" id="account"   placeholder="Account" class="form-control" required="">
             </div>

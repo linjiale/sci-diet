@@ -26,7 +26,9 @@ public class PostInterceptor extends BaseInterceptor {
             {
                 User user = userMapper.selectByPrimaryKey(userId);
                 modelAndView.addObject("user",user);
+                modelAndView.addObject("userName",user.getName());
             }
+
             modelAndView.addObject("userId",userId);
             object = request.getSession().getAttribute("foodList");
             if(object==null)

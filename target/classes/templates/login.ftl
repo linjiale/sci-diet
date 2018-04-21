@@ -28,18 +28,18 @@
         <h2>Welcome to Sci-diet</h2>
 
         <p>Login in. To see it in action.</p>
-        <form class="m-t" role="form" action="index.html">
+        <form class="m-t" role="form" >
             <div class="form-group">
-                <input type="text" name="account" id="account"   placeholder="Account" class="form-control" required="">
+                <input type="text" name="account" id="account"   placeholder="账号/邮箱/手机" class="form-control" required="">
             </div>
             <div class="form-group">
-                <input type="password" name="password" id="password" placeholder="Password" class="form-control"  required="">
+                <input type="password" name="password" id="password" placeholder="密码" class="form-control"  required="">
             </div>
-            <button type="submit" onclick="login();return false;" class="btn btn-primary block full-width m-b">Login</button>
+            <button type="submit" onclick="login();return false;" class="btn btn-primary block full-width m-b">登陆</button>
 
-            <a href="#"><small>Forgot password?</small></a>
-            <p class="text-muted text-center"><small>Do not have an account?</small></p>
-            <a class="btn btn-sm btn-white btn-block" href="register.html">Create an account</a>
+       
+            <p class="text-muted text-center"><small>还未拥有账号?</small></p>
+            <a class="btn btn-sm btn-white btn-block" href="register">注册</a>
         </form>
 
     </div>
