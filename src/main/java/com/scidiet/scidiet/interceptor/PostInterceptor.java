@@ -28,6 +28,11 @@ public class PostInterceptor extends BaseInterceptor {
                 modelAndView.addObject("user",user);
             }
             modelAndView.addObject("userId",userId);
+            object = request.getSession().getAttribute("foodList");
+            if(object==null)
+                modelAndView.addObject("legal",0);
+            else
+                modelAndView.addObject("legal",1);
         }
     }
 

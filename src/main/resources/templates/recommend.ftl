@@ -142,20 +142,32 @@
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-9">
-                    <h2>单餐预算上限</h2>
-                    <input type="text" name="maxPrice">
+                    <h2>就餐属性</h2>
+                    <input type="radio" name="meal" value="早餐" hidden>
+                    <input type="radio" name="meal" value="lunch">午餐
+                    <input type="radio" name="meal" value="dinner">晚餐
+                </div>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-9">
+                    <h2>荤菜数量</h2>
+                    <input type="radio" name="meat" value="0" >0
+                    <input type="radio" name="meat" value="1">1
+                    <input type="radio" name="meat" value="2">2
+                </div>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-9">
+                    <h2>素菜数量</h2>
+                    <input type="radio" name="vegetable" value="0" >0
+                    <input type="radio" name="vegetable" value="1">1
+                    <input type="radio" name="vegetable" value="2">2
                 </div>
             </div>
             <button type="submit" class="btn btn-block btn-outline btn-primary">开启智能推荐</button>
-            </a></form>
-        <div class="footer">
-            <div class="pull-right">
-                10GB of <strong>250GB</strong> Free.
-            </div>
-            <div>
-                <strong>Copyright</strong> Example Company &copy; 2014-2015
-            </div>
-        </div>
+            </a>
+        </form>
+
     </div>
 
 </div>

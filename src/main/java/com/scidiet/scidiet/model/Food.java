@@ -39,6 +39,8 @@ public class Food {
 
     private Double price;
 
+    private Integer isVegetable;
+
     public Integer getId() {
         return id;
     }
@@ -189,5 +191,13 @@ public class Food {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Integer getIsVegetable() {
+        return isVegetable;
+    }
+
+    public void setIsVegetable(Integer isVegetable) {
+        this.isVegetable = isVegetable;
     }
 }

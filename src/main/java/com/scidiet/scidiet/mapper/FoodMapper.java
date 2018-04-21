@@ -22,7 +22,7 @@ public interface FoodMapper {
         "nutrition11, location, ",
         "is_dinner, available, ",
         "taste, image_location, ",
-        "price)",
+        "price, is_vegetable)",
         "values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, ",
         "#{nutrition1,jdbcType=DOUBLE}, #{nutrition2,jdbcType=DOUBLE}, ",
         "#{nutrition3,jdbcType=DOUBLE}, #{nutrition4,jdbcType=DOUBLE}, ",
@@ -32,7 +32,7 @@ public interface FoodMapper {
         "#{nutrition11,jdbcType=DOUBLE}, #{location,jdbcType=VARCHAR}, ",
         "#{isDinner,jdbcType=INTEGER}, #{available,jdbcType=INTEGER}, ",
         "#{taste,jdbcType=VARCHAR}, #{imageLocation,jdbcType=VARCHAR}, ",
-        "#{price,jdbcType=DOUBLE})"
+        "#{price,jdbcType=DOUBLE}, #{isVegetable,jdbcType=INTEGER})"
     })
     int insert(Food record);
 
@@ -42,7 +42,7 @@ public interface FoodMapper {
         "select",
         "id, name, nutrition1, nutrition2, nutrition3, nutrition4, nutrition5, nutrition6, ",
         "nutrition7, nutrition8, nutrition9, nutrition10, nutrition11, location, is_dinner, ",
-        "available, taste, image_location, price",
+        "available, taste, image_location, price, is_vegetable",
         "from food",
         "where id = #{id,jdbcType=INTEGER}"
     })
@@ -70,7 +70,8 @@ public interface FoodMapper {
           "available = #{available,jdbcType=INTEGER},",
           "taste = #{taste,jdbcType=VARCHAR},",
           "image_location = #{imageLocation,jdbcType=VARCHAR},",
-          "price = #{price,jdbcType=DOUBLE}",
+          "price = #{price,jdbcType=DOUBLE},",
+          "is_vegetable = #{isVegetable,jdbcType=INTEGER}",
         "where id = #{id,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(Food record);
@@ -82,4 +83,6 @@ public interface FoodMapper {
 
     int updateIsAvailable(@Param("list")List<Integer>list);
     int updateIsNotAvailable(@Param("list")List<Integer>list);
+
+
 }

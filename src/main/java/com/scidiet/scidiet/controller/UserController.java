@@ -2,6 +2,7 @@ package com.scidiet.scidiet.controller;
 
 
 import com.google.common.collect.Lists;
+import com.scidiet.scidiet.beans.FunctionBean;
 import com.scidiet.scidiet.dto.BaseJsonResponse;
 import com.scidiet.scidiet.mapper.CanteenAdminMapper;
 import com.scidiet.scidiet.mapper.FoodMapper;
@@ -16,10 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Controller
@@ -61,7 +59,15 @@ public class UserController extends BaseController {
 
     @RequestMapping(value = "/metrics")
     public String metrics(Map<String, Object> model) {
-        return "metrics";
+
+        HttpSession session = servletRequest.getSession();
+        if(session.getAttribute("foodList")!=null)
+            return "metrics";
+        else
+        {
+          //  session.setAttribute("legal","0");
+            return "recommend";
+        }
     }
 
     @RequestMapping(value = "/profile")
@@ -75,12 +81,12 @@ public class UserController extends BaseController {
     }
 
     @RequestMapping(value = "/modify")
-    public String modify(Map<String,Object> model){
+    public String modify(Map<String, Object> model) {
         return "modify";
     }
 
     @RequestMapping(value = "/chooseLunch")
-    public String chooseLunch(Map<String,Object> model){
+    public String chooseLunch(Map<String, Object> model) {
         return "chooseLunch";
     }
 
@@ -141,7 +147,7 @@ public class UserController extends BaseController {
         HttpSession session = servletRequest.getSession();
 
         for (User item : list) {
-            if (account.equals(item.getEmail())||account.equals(item.getAccount())||account.equals(item.getPhone())) {
+            if (account.equals(item.getEmail()) || account.equals(item.getAccount()) || account.equals(item.getPhone())) {
                 if (password.equals(item.getPassword())) {
                     baseJsonResponse.setReturnCode("3.0");
                     baseJsonResponse.setErrorMessage("成功");
@@ -163,7 +169,7 @@ public class UserController extends BaseController {
     @RequestMapping(value = "/adminLoginFunction")
     @ResponseBody
     public BaseJsonResponse adminLoginFunction(@RequestParam("account") String account,
-                                         @RequestParam("password") String password) {
+                                               @RequestParam("password") String password) {
         List<CanteenAdmin> list = canteenAdminMapper.getAllCanteenAdmin();
         BaseJsonResponse baseJsonResponse = new BaseJsonResponse();
         HttpSession session = servletRequest.getSession();
@@ -186,14 +192,15 @@ public class UserController extends BaseController {
         baseJsonResponse.setErrorMessage("失败");
         return baseJsonResponse;
     }
+
     @RequestMapping(value = "/edit")
-    public String edit(@RequestParam(value = "sex",defaultValue = "") String sex,
-                                 @RequestParam(value = "age",defaultValue = "0") String age,
-                                 @RequestParam(value = "BMI",defaultValue = "0.0") String BMI,
-                                 @RequestParam(value = "work_type",defaultValue = "") String work_type,
-                                 @RequestParam(value ="allergy",defaultValue = "") String allergy,
-                                 @RequestParam(value ="love_food",defaultValue = "") String love_food,
-                                 @RequestParam(value ="hate_food",defaultValue = "") String hate_food) {
+    public String edit(@RequestParam(value = "sex", defaultValue = "") String sex,
+                       @RequestParam(value = "age", defaultValue = "0") String age,
+                       @RequestParam(value = "BMI", defaultValue = "0.0") String BMI,
+                       @RequestParam(value = "work_type", defaultValue = "") String work_type,
+                       @RequestParam(value = "allergy", defaultValue = "") String allergy,
+                       @RequestParam(value = "love_food", defaultValue = "") String love_food,
+                       @RequestParam(value = "hate_food", defaultValue = "") String hate_food) {
         User user = userMapper.selectByPrimaryKey(getUserId());
         user.setSex(sex);
         user.setAge(Integer.valueOf(age));
@@ -208,46 +215,82 @@ public class UserController extends BaseController {
 
     @RequestMapping(value = "/recommendAction")
     public String recommendAction(Map<String, Object> model,
-                                  @RequestParam(value = "demand",defaultValue = "") String demand,
-                                  @RequestParam(value = "preference",defaultValue = "") String preference,
-                                  @RequestParam(value = "place",defaultValue = "") String place,
-                                  @RequestParam(value = "maxPrice",defaultValue = "") String maxPrice){
-        List<Food>list = foodMapper.getAllFood();
+                                  @RequestParam(value = "demand", defaultValue = "") String demand,
+                                  @RequestParam(value = "preference", defaultValue = "") String preference,
+                                  @RequestParam(value = "place", defaultValue = "") String place,
+                                  @RequestParam(value = "meal", defaultValue = "") String meal,
+                                  @RequestParam(value = "meat", defaultValue = "0") String meat,
+                                  @RequestParam(value = "vegetable", defaultValue = "0") String vegetable) {
+        List<Food> list = foodMapper.getAllFood();
         Collections.shuffle(list);
         User user = userMapper.selectByPrimaryKey(getUserId());
-        list = list.stream().filter(food ->food.getLocation().equals(place)).collect(Collectors.toList());
+        int isDinner = meal.equals("dinner") ? 1 : 0;
+        list = list.stream().filter(food -> food.getLocation().equals(place) && food.getIsDinner().equals(isDinner)).collect(Collectors.toList());
+        List<Food> su = list.stream().filter(food -> food.getIsVegetable().equals(1)).collect(Collectors.toList());
+        List<Food> hun = list.stream().filter(food -> food.getIsVegetable().equals(0)).collect(Collectors.toList());
+        List<List<Food>> hunCollections = FunctionBean.getFoodList(hun,meat);
+        List<List<Food>> suCollections = FunctionBean.getFoodList(su,vegetable);
+        Collections.shuffle(hunCollections);
+        Collections.shuffle(suCollections);
+        if(hunCollections.size()>100)
+            hunCollections = hunCollections.subList(0,100);
+        if(suCollections.size()>100)
+            suCollections = suCollections.subList(0,100);
+        List<List<Food>> finalCollections = new ArrayList<>();
+        for(List<Food> a:suCollections)
+            for(List<Food> b:hunCollections)
+        {
+            List<Food>c = new ArrayList<>();
+            c.addAll(a);
+            c.addAll(b);
+            finalCollections.add(c);
+        }
+        finalCollections.sort(new Comparator<List<Food>>() {
+            @Override
+            public int compare(List<Food> o1, List<Food> o2) {
+                double[] n1 = FunctionBean.getNu(o1);
+                double[] n2 = FunctionBean.getNu(o2);
+                double ans = 0;
+                for(int i=0;i<n1.length;i++)
+                    ans+=n1[i]-n2[i];
+                return (int)ans;
+            }
+        });
+        if(finalCollections.size()>10)
+         finalCollections = finalCollections.subList(0,10);
+        HttpSession session = servletRequest.getSession();
+        session.setAttribute("foodList",finalCollections);
         return "metrics";
     }
 
 
     @RequestMapping(value = "/getAvailable")
     public String getAvailable(Map<String, Object> model,
-                               @RequestParam(value = "lunch") String lunch)
-    {
+                               @RequestParam(value = "lunch") String lunch) {
         HttpSession session = servletRequest.getSession();
         int adminId = (int) session.getAttribute("adminId");
         CanteenAdmin canteenAdmin = canteenAdminMapper.selectByPrimaryKey(adminId);
-        int isDinner = lunch.equals("dinner")?1:0;
-        session.setAttribute("isDinner",isDinner);
-        List<Food>list = foodMapper.getAllFood();
-        list = list.stream().filter(food ->(food.getLocation().equals(canteenAdmin.getLocation())&&food.getIsDinner()==isDinner)).collect(Collectors.toList());
-        model.put("list",list);
+        int isDinner = lunch.equals("dinner") ? 1 : 0;
+        session.setAttribute("isDinner", isDinner);
+        List<Food> list = foodMapper.getAllFood();
+        list = list.stream().filter(food -> (food.getLocation().equals(canteenAdmin.getLocation()) && food.getIsDinner() == isDinner)).collect(Collectors.toList());
+        model.put("list", list);
         return "getAvailable";
     }
+
     @RequestMapping(value = "/putResult")
     public String putResult(Map<String, Object> model,
-                               @RequestParam(value = "food") String[] foods)
-    {
+                            @RequestParam(value = "food") String[] foods) {
         List<String> foodList = Lists.newArrayList(foods);
         HttpSession session = servletRequest.getSession();
         int adminId = (int) session.getAttribute("adminId");
         CanteenAdmin canteenAdmin = canteenAdminMapper.selectByPrimaryKey(adminId);
-        int isDinner =(int) session.getAttribute("isDinner");
-        List<Food>list = foodMapper.getAllFood();
-        list = list.stream().filter(food ->(food.getLocation().equals(canteenAdmin.getLocation())&&food.getIsDinner()==isDinner)).collect(Collectors.toList());
-        List<Integer>list2 = list.stream().filter(food ->foodList.contains(food.getName())).map(Food::getId).collect(Collectors.toList());
+        int isDinner = (int) session.getAttribute("isDinner");
+        List<Food> list = foodMapper.getAllFood();
+        list = list.stream().filter(food -> (food.getLocation().equals(canteenAdmin.getLocation()) && food.getIsDinner() == isDinner)).collect(Collectors.toList());
+        List<Integer> list2 = list.stream().filter(food -> foodList.contains(food.getName())).map(Food::getId).collect(Collectors.toList());
         foodMapper.updateIsAvailable(list2);
-        list2 = list.stream().filter(food ->!foodList.contains(food.getName())).map(Food::getId).collect(Collectors.toList());
+        list2 = list.stream().filter(food -> !foodList.contains(food.getName())).map(Food::getId).collect(Collectors.toList());
         foodMapper.updateIsNotAvailable(list2);
         return "chooseLunch";
     }
