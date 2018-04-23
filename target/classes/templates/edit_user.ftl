@@ -8,7 +8,7 @@
 </head>
 <body>
 <#if userId == 0>
-<a href="login">登陆</a>
+<a href="login">登录</a>
 <a href="register">注册</a>
 <#else >
 ${user.name}

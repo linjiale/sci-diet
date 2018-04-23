@@ -118,11 +118,11 @@ public class UserController extends BaseController {
         List<User> list = userMapper.getAllUsers();
         BaseJsonResponse baseJsonResponse = new BaseJsonResponse();
         for (User item : list)
-            if (user.getEmail().equals(item.getEmail())) {
+            if (user.getEmail().equals(item.getEmail())&&!user.getEmail().equals("")) {
                 baseJsonResponse.setReturnCode("1.0");
                 baseJsonResponse.setErrorMessage("失败");
                 return baseJsonResponse;
-            } else if (user.getPhone().equals(item.getPhone())) {
+            } else if (user.getPhone().equals(item.getPhone())&&!user.getPhone().equals("")) {
                 baseJsonResponse.setReturnCode("2.0");
                 baseJsonResponse.setErrorMessage("失败");
                 return baseJsonResponse;
@@ -256,6 +256,7 @@ public class UserController extends BaseController {
                 return (int)ans;
             }
         });
+        Collections.shuffle(finalCollections);
         if(finalCollections.size()>10)
          finalCollections = finalCollections.subList(0,10);
         HttpSession session = servletRequest.getSession();

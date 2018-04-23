@@ -107,7 +107,7 @@
                 <#else>
                     <li>
                         <a href="login">
-                            <i class="fa fa-sign-out"></i> 登陆
+                            <i class="fa fa-sign-out"></i> 登录
                         </a>
                     </li>
                 </#if>

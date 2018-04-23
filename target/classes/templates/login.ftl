@@ -35,7 +35,7 @@
             <div class="form-group">
                 <input type="password" name="password" id="password" placeholder="密码" class="form-control"  required="">
             </div>
-            <button type="submit" onclick="login();return false;" class="btn btn-primary block full-width m-b">登陆</button>
+            <button type="submit" onclick="login();return false;" class="btn btn-primary block full-width m-b">登录</button>
 
        
             <p class="text-muted text-center"><small>还未拥有账号?</small></p>
@@ -70,7 +70,7 @@
 
             success:function(data){
                 if(data.returnCode==="3.0") {
-                    alert("登陆成功");
+                    alert("登录成功");
                     window.location.href = "index";
                 }
                 if(data.returnCode==="2.0") {

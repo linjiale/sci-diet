@@ -27,27 +27,28 @@
         </div>
         <h2>Register to Sci-diet</h2>
         <p>Create account to see it in action.</p>
-        <form class="m-t" role="form" >
-            <div class="form-group">
-                <input type="text" class="form-control" name="account" id="account"   placeholder="账号" required="">
-            </div>
-            <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="邮箱" required="">
-            </div>
-            <div class="form-group">
-                <input type="password" class="form-control" name="password" id="password" placeholder="密码" required="">
-            </div>
-            <div class="form-group">
-                <input type="text" name="name" id="name" placeholder="名字" class="form-control" >
+        <form class="m-t" role="form"  >
+            <div class="form-group" >
+                <input type="text" class="form-control" name="account" id="account"   placeholder="账号" >
             </div>
             <div class="form-group">
                 <input type="text" name="phone" id="phone" placeholder="手机" class="form-control">
             </div>
+            <div class="form-group" hidden>
+                <input type="email" class="form-control" name="email" id="email" placeholder="邮箱" >
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" id="password" placeholder="密码" required="">
+            </div>
+            <div class="form-group" >
+                <input type="text" name="name" id="name" placeholder="昵称" class="form-control" >
+            </div>
+
 
             <button type="submit" onclick="register();return false;" class="btn btn-primary block full-width m-b">注册</button>
 
             <p class="text-muted text-center"><small>已经拥有账号？</small></p>
-            <a class="btn btn-sm btn-white btn-block" href="login">登陆</a>
+            <a class="btn btn-sm btn-white btn-block" href="login">登录</a>
         </form>
         </br>
         </br>
