@@ -140,7 +140,7 @@
                     <div style="width:50%;padding:0;margin:0;float:left;box-sizing:border-box;">
                         <div class="contact-box center-version">
                             <a href="#">
-                                <img alt="image" class="img-circle" src="img/re1.jpg">
+                                <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/${dish.imageLocation}">
                                 <h3 class="m-b-xs"><strong>${dish.name}</strong></h3>
                             </a>
                         </div>

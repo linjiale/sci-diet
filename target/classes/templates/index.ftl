@@ -139,7 +139,7 @@
             </div>
             <div class='col-lg-12'>
 
-                <div class='demo'><img src="img/index.jpg"  alt="主页" ></div>
+                <div class='demo'><img src="http://scidiet-1252946747.file.myqcloud.com/img/index.jpg"  alt="主页" ></div>
 
             </div>
             <div >
