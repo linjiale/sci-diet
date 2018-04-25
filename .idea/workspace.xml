@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="82bcffd3-80a9-41c6-a775-bac782274001" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scidiet/scidiet/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/scidiet/scidiet/controller/UserController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/adminLogin.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminLogin.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/chooseLunch.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/chooseLunch.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/edit_user.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit_user.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/layouts.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/layouts.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" />
@@ -15,6 +13,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/recommend.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/recommend.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/register.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/index.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/index.ftl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,10 +50,10 @@
       <file leaf-file-name="modify.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/modify.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+            <state relative-caret-position="173">
+              <caret line="25" column="67" lean-forward="false" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="67" />
               <folding>
-                <element signature="e#3830#4469#0#FTL&gt;" expanded="false" />
+                <element signature="e#3786#4425#0#FTL&gt;" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -63,8 +62,8 @@
       <file leaf-file-name="profile.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/profile.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="26" column="67" lean-forward="false" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="67" />
+            <state relative-caret-position="223">
+              <caret line="254" column="11" lean-forward="false" selection-start-line="254" selection-start-column="8" selection-end-line="254" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -73,41 +72,19 @@
       <file leaf-file-name="getAvailable.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/getAvailable.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+            <state relative-caret-position="243">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recommend.ftl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="recommend.ftl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/recommend.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="27" column="78" lean-forward="false" selection-start-line="27" selection-start-column="74" selection-end-line="27" selection-end-column="78" />
+            <state relative-caret-position="443">
+              <caret line="189" column="57" lean-forward="false" selection-start-line="189" selection-start-column="57" selection-end-line="189" selection-end-column="57" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.ftl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="57" column="23" lean-forward="true" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="metrics.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/metrics.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="189" column="11" lean-forward="false" selection-start-line="189" selection-start-column="8" selection-end-line="189" selection-end-column="11" />
-              <folding>
-                <element signature="e#4059#4698#0#FTL&gt;" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -115,8 +92,8 @@
       <file leaf-file-name="index.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="486" column="35" lean-forward="false" selection-start-line="486" selection-start-column="31" selection-end-line="486" selection-end-column="35" />
+            <state relative-caret-position="173">
+              <caret line="46" column="113" lean-forward="false" selection-start-line="46" selection-start-column="113" selection-end-line="46" selection-end-column="113" />
               <folding />
             </state>
           </provider>
@@ -125,9 +102,21 @@
       <file leaf-file-name="layouts.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layouts.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
+            <state relative-caret-position="173">
               <caret line="27" column="67" lean-forward="false" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="67" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="metrics.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/metrics.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="142" column="71" lean-forward="false" selection-start-line="142" selection-start-column="68" selection-end-line="142" selection-end-column="71" />
+              <folding>
+                <element signature="e#4015#4654#0#FTL&gt;" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,8 +124,18 @@
       <file leaf-file-name="login.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="41" column="58" lean-forward="false" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="58" />
+            <state relative-caret-position="173">
+              <caret line="50" column="11" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chooseLunch.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/chooseLunch.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="39" column="11" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -145,8 +144,8 @@
       <file leaf-file-name="edit_user.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/edit_user.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="7" />
+            <state relative-caret-position="173">
+              <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -164,7 +163,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>col-lg-12</find>
       <find>主页</find>
       <find>个人中心</find>
       <find>10</find>
@@ -193,6 +191,7 @@
       <find>im</find>
       <find>img</find>
       <find>href</find>
+      <find>fontaw</find>
       <find>src</find>
     </findStrings>
     <replaceStrings>
@@ -256,17 +255,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/scidiet/scidiet/interceptor/PostInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/getAvailable.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/scidiet/scidiet/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/edit_user.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/adminLogin.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/chooseLunch.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/edit_user.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/layouts.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/metrics.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/modify.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/recommend.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/register.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/recommend.ftl" />
       </list>
     </option>
   </component>
@@ -431,6 +430,25 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scidiet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scidiet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="font-awesome" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scidiet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="scidiet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="font-awesome" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scidiet" type="b2602c69:ProjectViewProjectNode" />
@@ -657,12 +675,12 @@
       <workItem from="1524469510743" duration="4714000" />
       <workItem from="1524498847353" duration="125000" />
       <workItem from="1524561525895" duration="618000" />
-      <workItem from="1524648701772" duration="2466000" />
+      <workItem from="1524648701772" duration="3476000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93062000" />
+    <option name="totallyTimeSpent" value="94072000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1036,17 +1054,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/adminLogin.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="173">
+          <caret line="47" column="11" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/chooseLunch.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
+        <state relative-caret-position="182">
           <caret line="39" column="11" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="11" />
           <folding />
         </state>
@@ -1054,31 +1080,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/edit_user.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="7" />
+        <state relative-caret-position="173">
+          <caret line="53" column="34" lean-forward="false" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/getAvailable.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        <state relative-caret-position="243">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="486" column="35" lean-forward="false" selection-start-line="486" selection-start-column="31" selection-end-line="486" selection-end-column="35" />
+        <state relative-caret-position="173">
+          <caret line="46" column="113" lean-forward="false" selection-start-line="46" selection-start-column="113" selection-end-line="46" selection-end-column="113" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layouts.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
+        <state relative-caret-position="173">
           <caret line="27" column="67" lean-forward="false" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="67" />
           <folding />
         </state>
@@ -1086,52 +1112,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="41" column="58" lean-forward="false" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="58" />
+        <state relative-caret-position="173">
+          <caret line="50" column="11" lean-forward="false" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/metrics.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="189" column="11" lean-forward="false" selection-start-line="189" selection-start-column="8" selection-end-line="189" selection-end-column="11" />
+        <state relative-caret-position="173">
+          <caret line="142" column="71" lean-forward="false" selection-start-line="142" selection-start-column="68" selection-end-line="142" selection-end-column="71" />
           <folding>
-            <element signature="e#4059#4698#0#FTL&gt;" expanded="false" />
+            <element signature="e#4015#4654#0#FTL&gt;" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/modify.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+        <state relative-caret-position="173">
+          <caret line="25" column="67" lean-forward="false" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="67" />
           <folding>
-            <element signature="e#3830#4469#0#FTL&gt;" expanded="false" />
+            <element signature="e#3786#4425#0#FTL&gt;" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/profile.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="26" column="67" lean-forward="false" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="67" />
+        <state relative-caret-position="223">
+          <caret line="254" column="11" lean-forward="false" selection-start-line="254" selection-start-column="8" selection-end-line="254" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/recommend.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="27" column="78" lean-forward="false" selection-start-line="27" selection-start-column="74" selection-end-line="27" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="57" column="23" lean-forward="true" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+        <state relative-caret-position="443">
+          <caret line="189" column="57" lean-forward="false" selection-start-line="189" selection-start-column="57" selection-end-line="189" selection-end-column="57" />
           <folding />
         </state>
       </provider>
