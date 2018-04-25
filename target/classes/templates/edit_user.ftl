@@ -51,10 +51,10 @@ ${user.name}
 </form>
 </body>
 </html>
-<script type="text/javascript" src="../assets/js/jquery-2.1.0.js"></script>
-<script type="text/javascript" src="../assets/js/amazeui.min.js"></script>
-<script type="text/javascript" src="../assets/js/app.js"></script>
-<script type="text/javascript" src="../assets/js/blockUI.js"></script>
+<script type="text/javascript" src="http://scidiet-1252946747.file.myqcloud.com/assets/js/jquery-2.1.0.js"></script>
+<script type="text/javascript" src="http://scidiet-1252946747.file.myqcloud.com/assets/js/amazeui.min.js"></script>
+<script type="text/javascript" src="http://scidiet-1252946747.file.myqcloud.com/assets/js/app.js"></script>
+<script type="text/javascript" src="http://scidiet-1252946747.file.myqcloud.com/assets/js/blockUI.js"></script>
 <script type="text/javascript">
 
 </script>

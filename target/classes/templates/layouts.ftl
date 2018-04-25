@@ -8,11 +8,11 @@
 
     <title>品牌理念</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="http://scidiet-1252946747.file.myqcloud.com/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://scidiet-1252946747.file.myqcloud.com/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="http://scidiet-1252946747.file.myqcloud.com/css/animate.css" rel="stylesheet">
+    <link href="http://scidiet-1252946747.file.myqcloud.com/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -25,7 +25,7 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/profile_small.jpg" />
                              </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">${userName!""}</strong>
@@ -151,7 +151,7 @@
                             <div class="m-t-md">
                                 <p>Check the Dashboard v.4 with top navigation layout</p>
                                 <div class="p-lg ">
-                                    <a href="dashboard_4"><img class="img-responsive img-shadow" src="img/dashbard4_2.jpg" alt=""></a>
+                                    <a href="dashboard_4"><img class="img-responsive img-shadow" src="http://scidiet-1252946747.file.myqcloud.com/img/dashbard4_2.jpg" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +175,7 @@
                             <div class="m-t-md">
                                 <p>Check the Dashboard v.4 with basic layout</p>
                                 <div class="p-lg">
-                                    <a href="dashboard_4_1"><img class="img-responsive img-shadow" src="img/dashbard4_1.jpg" alt=""></a>
+                                    <a href="dashboard_4_1"><img class="img-responsive img-shadow" src="http://scidiet-1252946747.file.myqcloud.com/img/dashbard4_1.jpg" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -200,7 +200,7 @@
                             <div class="m-t-md">
                                 <p>Check the Outlook view in in full height page</p>
                                 <div class="p-lg ">
-                                    <a href="full_height"><img class="img-responsive img-shadow" src="img/full_height.jpg" alt=""></a>
+                                    <a href="full_height"><img class="img-responsive img-shadow" src="http://scidiet-1252946747.file.myqcloud.com/img/full_height.jpg" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -224,7 +224,7 @@
                             <div class="m-t-md">
                                 <p>Check the off canvas menu on example article page</p>
                                 <div class="p-lg">
-                                    <a href="off_canvas_menu"><img class="img-responsive img-shadow" src="img/off_canvas.jpg" alt=""></a>
+                                    <a href="off_canvas_menu"><img class="img-responsive img-shadow" src="http://scidiet-1252946747.file.myqcloud.com/img/off_canvas.jpg" alt=""></a>
                                 </div>
                             </div>
                         </div>
@@ -245,16 +245,16 @@
 
 
 <!-- Mainly scripts -->
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/jquery-2.1.1.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/bootstrap.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="js/inspinia.js"></script>
-<script src="js/plugins/pace/pace.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/inspinia.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/pace/pace.min.js"></script>
 
-<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 
 </body>

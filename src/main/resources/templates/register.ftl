@@ -8,11 +8,11 @@
 
     <title>Register</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="http://scidiet-1252946747.file.myqcloud.com/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://scidiet-1252946747.file.myqcloud.com/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="http://scidiet-1252946747.file.myqcloud.com/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="http://scidiet-1252946747.file.myqcloud.com/css/animate.css" rel="stylesheet">
+    <link href="http://scidiet-1252946747.file.myqcloud.com/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -56,10 +56,10 @@
 </div>
 
 <!-- Mainly scripts -->
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/jquery-2.1.1.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/bootstrap.min.js"></script>
 <!-- iCheck -->
-<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/iCheck/icheck.min.js"></script>
 <script>
     $(document).ready(function(){
         $('.i-checks').iCheck({

@@ -226,8 +226,8 @@
                                 </div>
                                 <div>
 
-                                    <img src="img/article1.jpg" height="200" width="300" />
-                                    <img src="img/article2.jpg" height="200" width="300" />
+                                    <img src="http://scidiet-1252946747.file.myqcloud.com/img/article1.jpg" height="200" width="300" />
+                                    <img src="http://scidiet-1252946747.file.myqcloud.com/img/article2.jpg" height="200" width="300" />
 
                                 </div>
                             </div>
@@ -247,7 +247,7 @@
 
                                             <div class="feed-element">
                                                 <a href="profile" class="pull-left">
-                                                    <img alt="image" class="img-circle" src="img/menu1.png">
+                                                    <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/menu1.png">
                                                 </a>
                                                 <div class="media-body ">
                                                     <small class="pull-right">5m ago</small>
@@ -259,7 +259,7 @@
 
                                             <div class="feed-element">
                                                 <a href="profile" class="pull-left">
-                                                    <img alt="image" class="img-circle" src="img/menu2.png">
+                                                    <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/menu2.png">
                                                 </a>
                                                 <div class="media-body ">
                                                     <small class="pull-right">2h ago</small>
@@ -269,7 +269,7 @@
                                             </div>
                                             <div class="feed-element">
                                                 <a href="profile" class="pull-left">
-                                                    <img alt="image" class="img-circle" src="img/menu3.png">
+                                                    <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/menu3.png">
                                                 </a>
                                                 <div class="media-body ">
                                                     <small class="pull-right">2h ago</small>
@@ -279,7 +279,7 @@
                                             </div>
                                             <div class="feed-element">
                                                 <a href="profile" class="pull-left">
-                                                    <img alt="image" class="img-circle" src="img/menu4.png">
+                                                    <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/menu4.png">
                                                 </a>
                                                 <div class="media-body ">
                                                     <small class="pull-right text-navy">5h ago</small>
@@ -291,43 +291,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--        <div class="feed-element">
-                                                       <a href="profile" class="pull-left">
-                                                           <img alt="image" class="img-circle" src="img/a5.jpg">
-                                                       </a>
-                                                       <div class="media-body ">
-                                                           <small class="pull-right">2h ago</small>
-                                                           <strong>Kim Smith</strong> posted message on <strong>Monica Smith</strong> site. <br>
-                                                           <small class="text-muted">Yesterday 5:20 pm - 12.06.2014</small>
-                                                           <div class="well">
-                                                               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                                               Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                                           </div>
-                                                           <div class="pull-right">
-                                                               <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
-                                                           </div>
-                                                       </div>
-                                                   </div>
-                                                   <div class="feed-element">
-                                                       <a href="profile" class="pull-left">
-                                                           <img alt="image" class="img-circle" src="img/profile.jpg">
-                                                       </a>
-                                                       <div class="media-body ">
-                                                           <small class="pull-right">23h ago</small>
-                                                           <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
-                                                           <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
-                                                       </div>
-                                                   </div>
-                                                   <div class="feed-element">
-                                                       <a href="profile" class="pull-left">
-                                                           <img alt="image" class="img-circle" src="img/a7.jpg">
-                                                       </a>
-                                                       <div class="media-body ">
-                                                           <small class="pull-right">46h ago</small>
-                                                           <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
-                                                           <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
-                                                       </div>
-                                                   </div> -->
+
                                         </div>
 
                                         <button class="btn btn-primary btn-block m-t"><i class="fa fa-arrow-down"></i> Show More</button>
@@ -504,7 +468,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a1.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a1.jpg">
 
                                     <div class="m-t-xs">
                                         <i class="fa fa-star text-warning"></i>
@@ -522,7 +486,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a2.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a2.jpg">
                                 </div>
                                 <div class="media-body">
                                     The point of using Lorem Ipsum is that it has a more-or-less normal.
@@ -534,7 +498,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a3.jpg">
 
                                     <div class="m-t-xs">
                                         <i class="fa fa-star text-warning"></i>
@@ -552,7 +516,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a4.jpg">
                                 </div>
 
                                 <div class="media-body">
@@ -565,7 +529,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a8.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a8.jpg">
                                 </div>
                                 <div class="media-body">
 
@@ -578,7 +542,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a7.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a7.jpg">
                                 </div>
                                 <div class="media-body">
                                     Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
@@ -590,7 +554,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a3.jpg">
 
                                     <div class="m-t-xs">
                                         <i class="fa fa-star text-warning"></i>
@@ -608,7 +572,7 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
+                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a4.jpg">
                                 </div>
                                 <div class="media-body">
                                     Uncover many web sites still in their infancy. Various versions have.
@@ -854,43 +818,43 @@
 </div>
 
 <!-- Mainly scripts -->
-<script src="js/jquery-2.1.1.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/jquery-2.1.1.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/bootstrap.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Flot -->
-<script src="js/plugins/flot/jquery.flot.js"></script>
-<script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-<script src="js/plugins/flot/jquery.flot.spline.js"></script>
-<script src="js/plugins/flot/jquery.flot.resize.js"></script>
-<script src="js/plugins/flot/jquery.flot.pie.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/flot/jquery.flot.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/flot/jquery.flot.spline.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/flot/jquery.flot.resize.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/flot/jquery.flot.pie.js"></script>
 
 <!-- Peity -->
-<script src="js/plugins/peity/jquery.peity.min.js"></script>
-<script src="js/demo/peity-demo.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/peity/jquery.peity.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/demo/peity-demo.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="js/inspinia.js"></script>
-<script src="js/plugins/pace/pace.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/inspinia.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/pace/pace.min.js"></script>
 
 <!-- jQuery UI -->
-<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/jquery-ui/jquery-ui.min.js"></script>
 
 <!-- GITTER -->
-<script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/gritter/jquery.gritter.min.js"></script>
 
 <!-- Sparkline -->
-<script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/sparkline/jquery.sparkline.min.js"></script>
 
 <!-- Sparkline demo data  -->
-<script src="js/demo/sparkline-demo.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/demo/sparkline-demo.js"></script>
 
 <!-- ChartJS-->
-<script src="js/plugins/chartJs/Chart.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/chartJs/Chart.min.js"></script>
 
 <!-- Toastr -->
-<script src="js/plugins/toastr/toastr.min.js"></script>
+<script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/toastr/toastr.min.js"></script>
 
 
 
