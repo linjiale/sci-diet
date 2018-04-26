@@ -245,6 +245,10 @@ public class UserController extends BaseController {
             c.addAll(b);
             finalCollections.add(c);
         }
+        if(suCollections.size()==0)
+            finalCollections=hunCollections;
+        if(hunCollections.size()==0)
+            finalCollections=suCollections;
         finalCollections.sort(new Comparator<List<Food>>() {
             @Override
             public int compare(List<Food> o1, List<Food> o2) {
@@ -290,11 +294,15 @@ public class UserController extends BaseController {
         List<Food> list = foodMapper.getAllFood();
         list = list.stream().filter(food -> (food.getLocation().equals(canteenAdmin.getLocation()) && food.getIsDinner() == isDinner)).collect(Collectors.toList());
         List<Integer> list2 = list.stream().filter(food -> foodList.contains(food.getName())).map(Food::getId).collect(Collectors.toList());
+        if(list2.size()>0)
         foodMapper.updateIsAvailable(list2);
         list2 = list.stream().filter(food -> !foodList.contains(food.getName())).map(Food::getId).collect(Collectors.toList());
+        if(list2.size()>0)
         foodMapper.updateIsNotAvailable(list2);
         return "chooseLunch";
     }
+
+
 
   
 

@@ -1,150 +1,151 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.scidiet.scidiet.mapper.UserMapper" >
-  <resultMap id="BaseResultMap" type="com.scidiet.scidiet.model.User" >
-    <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="account" property="account" jdbcType="VARCHAR" />
-    <result column="password" property="password" jdbcType="VARCHAR" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
-    <result column="email" property="email" jdbcType="VARCHAR" />
-    <result column="phone" property="phone" jdbcType="VARCHAR" />
-    <result column="sex" property="sex" jdbcType="VARCHAR" />
-    <result column="age" property="age" jdbcType="INTEGER" />
-    <result column="BMI" property="bmi" jdbcType="DOUBLE" />
-    <result column="work_type" property="workType" jdbcType="VARCHAR" />
-    <result column="allergy" property="allergy" jdbcType="VARCHAR" />
-    <result column="love_food" property="loveFood" jdbcType="VARCHAR" />
-    <result column="hate_food" property="hateFood" jdbcType="VARCHAR" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.scidiet.scidiet.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.scidiet.scidiet.model.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="BMI" jdbcType="DOUBLE" property="bmi" />
+    <result column="work_type" jdbcType="VARCHAR" property="workType" />
+    <result column="allergy" jdbcType="VARCHAR" property="allergy" />
+    <result column="love_food" jdbcType="VARCHAR" property="loveFood" />
+    <result column="hate_food" jdbcType="VARCHAR" property="hateFood" />
   </resultMap>
-  <sql id="Base_Column_List" >
+  <sql id="Base_Column_List">
     id, account, password, name, email, phone, sex, age, BMI, work_type, allergy, love_food, 
     hate_food
   </sql>
-  <insert id="insertSelective" parameterType="com.scidiet.scidiet.model.User" >
+  <insert id="insertSelective" parameterType="com.scidiet.scidiet.model.User">
     insert into user
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         id,
       </if>
-      <if test="account != null" >
+      <if test="account != null">
         account,
       </if>
-      <if test="password != null" >
+      <if test="password != null">
         password,
       </if>
-      <if test="name != null" >
+      <if test="name != null">
         name,
       </if>
-      <if test="email != null" >
+      <if test="email != null">
         email,
       </if>
-      <if test="phone != null" >
+      <if test="phone != null">
         phone,
       </if>
-      <if test="sex != null" >
+      <if test="sex != null">
         sex,
       </if>
-      <if test="age != null" >
+      <if test="age != null">
         age,
       </if>
-      <if test="bmi != null" >
+      <if test="bmi != null">
         BMI,
       </if>
-      <if test="workType != null" >
+      <if test="workType != null">
         work_type,
       </if>
-      <if test="allergy != null" >
+      <if test="allergy != null">
         allergy,
       </if>
-      <if test="loveFood != null" >
+      <if test="loveFood != null">
         love_food,
       </if>
-      <if test="hateFood != null" >
+      <if test="hateFood != null">
         hate_food,
       </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="account != null" >
+      <if test="account != null">
         #{account,jdbcType=VARCHAR},
       </if>
-      <if test="password != null" >
+      <if test="password != null">
         #{password,jdbcType=VARCHAR},
       </if>
-      <if test="name != null" >
+      <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="email != null" >
+      <if test="email != null">
         #{email,jdbcType=VARCHAR},
       </if>
-      <if test="phone != null" >
+      <if test="phone != null">
         #{phone,jdbcType=VARCHAR},
       </if>
-      <if test="sex != null" >
+      <if test="sex != null">
         #{sex,jdbcType=VARCHAR},
       </if>
-      <if test="age != null" >
+      <if test="age != null">
         #{age,jdbcType=INTEGER},
       </if>
-      <if test="bmi != null" >
+      <if test="bmi != null">
         #{bmi,jdbcType=DOUBLE},
       </if>
-      <if test="workType != null" >
+      <if test="workType != null">
         #{workType,jdbcType=VARCHAR},
       </if>
-      <if test="allergy != null" >
+      <if test="allergy != null">
         #{allergy,jdbcType=VARCHAR},
       </if>
-      <if test="loveFood != null" >
+      <if test="loveFood != null">
         #{loveFood,jdbcType=VARCHAR},
       </if>
-      <if test="hateFood != null" >
+      <if test="hateFood != null">
         #{hateFood,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.scidiet.scidiet.model.User" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.scidiet.scidiet.model.User">
     update user
-    <set >
-      <if test="account != null" >
+    <set>
+      <if test="account != null">
         account = #{account,jdbcType=VARCHAR},
       </if>
-      <if test="password != null" >
+      <if test="password != null">
         password = #{password,jdbcType=VARCHAR},
       </if>
-      <if test="name != null" >
+      <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="email != null" >
+      <if test="email != null">
         email = #{email,jdbcType=VARCHAR},
       </if>
-      <if test="phone != null" >
+      <if test="phone != null">
         phone = #{phone,jdbcType=VARCHAR},
       </if>
-      <if test="sex != null" >
+      <if test="sex != null">
         sex = #{sex,jdbcType=VARCHAR},
       </if>
-      <if test="age != null" >
+      <if test="age != null">
         age = #{age,jdbcType=INTEGER},
       </if>
-      <if test="bmi != null" >
+      <if test="bmi != null">
         BMI = #{bmi,jdbcType=DOUBLE},
       </if>
-      <if test="workType != null" >
+      <if test="workType != null">
         work_type = #{workType,jdbcType=VARCHAR},
       </if>
-      <if test="allergy != null" >
+      <if test="allergy != null">
         allergy = #{allergy,jdbcType=VARCHAR},
       </if>
-      <if test="loveFood != null" >
+      <if test="loveFood != null">
         love_food = #{loveFood,jdbcType=VARCHAR},
       </if>
-      <if test="hateFood != null" >
+      <if test="hateFood != null">
         hate_food = #{hateFood,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+
 </mapper>

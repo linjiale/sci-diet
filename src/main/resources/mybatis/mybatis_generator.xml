@@ -41,7 +41,7 @@
         </javaClientGenerator>
 
         <!-- !!!! Table Configurations !!!! -->
-        <table tableName="food" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+        <table tableName="user" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false"/>
     </context>
 </generatorConfiguration>
