@@ -34,12 +34,12 @@ public class UserController extends BaseController {
 
     @RequestMapping(value = "/index")
     public String index(Map<String, Object> model) {
-        return "login";
+        return "index";
     }
 
     @RequestMapping(value = "/")
     public String chushi(Map<String, Object> model) {
-        return "index";
+        return "login";
     }
 
     @RequestMapping(value = "/register")
