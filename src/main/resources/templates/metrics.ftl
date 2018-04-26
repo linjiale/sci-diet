@@ -32,7 +32,8 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/profile_small.jpg"/>
+                            <img alt="image" class="img-circle"
+                                 src="http://scidiet-1252946747.file.myqcloud.com/img/profile_small.jpg"/>
                              </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear"> <span class="block m-t-xs"> <strong
@@ -140,7 +141,8 @@
                     <div style="width:50%;padding:0;margin:0;float:left;box-sizing:border-box;">
                         <div class="contact-box center-version">
                             <a href="#">
-                                <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/${dish.imageLocation}">
+                                <img alt="image" class="img-circle"
+                                     src="http://scidiet-1252946747.file.myqcloud.com/${dish.imageLocation}">
                                 <h3 class="m-b-xs"><strong>${dish.name}</strong></h3>
                             </a>
                         </div>
@@ -156,33 +158,33 @@
         </div>
 
 
-    </div>
-    <div class="row wrapper border-bottom white-bg page-heading">
-        <div class="col-lg-9">
-            <h2>小贴士</h2>
-            <h4>如果存在诸如疾病、过敏等导致的饮食禁忌，请遵医嘱</h4>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-9">
+                <h2>小贴士</h2>
+                <h4>如果存在诸如疾病、过敏等导致的饮食禁忌，请遵医嘱</h4>
+            </div>
         </div>
-    </div>
-    </br>
-    <div class="row wrapper border-bottom white-bg page-heading">
-        <div class="col-lg-9">
-            <h2>用户点评</h2>
-            <form>
-                <input type="radio" name="sex" value="male">很满意
+        </br>
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-9">
+                <h2>用户点评</h2>
+                <form>
+                    <input type="radio" name="sex" value="male">很满意
 
-                <input type="radio" name="sex" value="female">基本满意
-                <input type="radio" name="sex" value="female">一般
-                <input type="radio" name="sex" value="female">不满意
-                <input type="radio" name="sex" value="female">很不满意
-            </form>
+                    <input type="radio" name="sex" value="female">基本满意
+                    <input type="radio" name="sex" value="female">一般
+                    <input type="radio" name="sex" value="female">不满意
+                    <input type="radio" name="sex" value="female">很不满意
+                </form>
+            </div>
         </div>
-    </div>
+
 
     </br>
     </br>
     </br>
 
-
+</div>
 </div>
 </div>
 

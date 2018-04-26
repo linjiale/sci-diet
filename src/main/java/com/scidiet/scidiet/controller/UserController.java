@@ -277,9 +277,11 @@ public class UserController extends BaseController {
         CanteenAdmin canteenAdmin = canteenAdminMapper.selectByPrimaryKey(adminId);
         int isDinner = lunch.equals("dinner") ? 1 : 0;
         session.setAttribute("isDinner", isDinner);
+
         List<Food> list = foodMapper.getAllFood();
         list = list.stream().filter(food -> (food.getLocation().equals(canteenAdmin.getLocation()) && food.getIsDinner() == isDinner)).collect(Collectors.toList());
         model.put("list", list);
+        model.put("isDinner",isDinner);
         return "getAvailable";
     }
 

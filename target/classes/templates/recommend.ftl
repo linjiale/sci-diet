@@ -113,10 +113,10 @@
                 <div class="col-lg-9">
                     <h2>饮食需求</h2>
 
-                    <input type="radio" name="demand" value="减肥">减肥
-                    <input type="radio" name="demand" value="增肌">增肌
-                    <input type="radio" name="demand" value="塑形">塑形
-                    <input type="radio" name="demand" value="美容">美容
+                    <input type="radio" name="demand" value="减肥">减肥&nbsp;
+                    <input type="radio" name="demand" value="增肌">增肌&nbsp;
+                    <input type="radio" name="demand" value="塑形">塑形&nbsp;
+                    <input type="radio" name="demand" value="美容">美容&nbsp;
                     <input type="radio" name="demand" value="加强营养">加强营养
 
                 </div>
@@ -124,10 +124,10 @@
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-9">
                     <h2>饮食偏好</h2>
-                    <input type="radio" name="preference" value="清淡">清淡
-                    <input type="radio" name="preference" value="偏甜">偏甜
-                    <input type="radio" name="preference" value="偏辣">偏辣
-                    <input type="radio" name="preference" value="偏咸">偏咸
+                    <input type="radio" name="preference" value="清淡">清淡&nbsp;
+                    <input type="radio" name="preference" value="偏甜">偏甜&nbsp;
+                    <input type="radio" name="preference" value="偏辣">偏辣&nbsp;
+                    <input type="radio" name="preference" value="偏咸">偏咸&nbsp;
                     <input type="radio" name="preference" value="无特殊要求">无特殊要求
                 </div>
             </div>
@@ -144,23 +144,23 @@
                 <div class="col-lg-9">
                     <h2>就餐属性</h2>
                     <input type="radio" name="meal" value="早餐" hidden>
-                    <input type="radio" name="meal" value="lunch">午餐
+                    <input type="radio" name="meal" value="lunch">午餐&nbsp;
                     <input type="radio" name="meal" value="dinner">晚餐
                 </div>
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-9">
                     <h2>荤菜数量</h2>
-                    <input type="radio" name="meat" value="0" >0
-                    <input type="radio" name="meat" value="1">1
+                    <input type="radio" name="meat" value="0" >0&nbsp;
+                    <input type="radio" name="meat" value="1">1&nbsp;
                     <input type="radio" name="meat" value="2">2
                 </div>
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-9">
                     <h2>素菜数量</h2>
-                    <input type="radio" name="vegetable" value="0" >0
-                    <input type="radio" name="vegetable" value="1">1
+                    <input type="radio" name="vegetable" value="0" >0&nbsp;
+                    <input type="radio" name="vegetable" value="1">1&nbsp;
                     <input type="radio" name="vegetable" value="2">2
                 </div>
             </div>

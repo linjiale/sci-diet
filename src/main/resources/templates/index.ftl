@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html>
+<style type="text/css">
+    .parent {
+        margin: 20px auto;
+        position: relative;
+        float: left;
+        left: 50%;
+    }
 
+    .parent a {
+        text-align: center;
+        position: relative;
+        left: -50%;
+        line-height: 200px;
+    }
+
+    .parent a img {
+        vertical-align: -webkit-baseline-middle;
+        width: 15vw;
+        height: 22.1875vw;
+    }
+</style>
 <head>
 
     <meta charset="utf-8">
@@ -27,12 +47,14 @@
         margin: 0;
         padding: 0;
     }
+
     .demo {
         width: 100%;
         height: 100%;
         max-width: 760px;
     }
-    .demo img{
+
+    .demo img {
         width: 100%;
         height: 62.5%;
     }
@@ -44,11 +66,13 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/profile_small.jpg" />
+                            <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/profile_small.jpg"/>
                              </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">${userName!""}</strong>
-                             </span> <span class="text-muted text-xs block">student <b class="caret"></b></span> </span> </a>
+                            <span class="clear"> <span class="block m-t-xs"> <strong
+                                    class="font-bold">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Art Director <b
+                                    class="caret"></b></span> </span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                         <#if  userId == 0>
                             <li class="divider"></li>
@@ -81,7 +105,7 @@
                 </li>
 
                 <li>
-                    <a href="metrics"><i class="fa fa-pie-chart"></i> <span class="nav-label">推荐结果</span>  </a>
+                    <a href="metrics"><i class="fa fa-pie-chart"></i> <span class="nav-label">推荐结果</span> </a>
                 </li>
                 <li>
                     <a href="profile"><i class="fa fa-flask"></i> <span class="nav-label">个人中心</span></a>
@@ -97,10 +121,12 @@
         <div class="row border-bottom">
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
-                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i>
+                    </a>
                     <form role="search" class="navbar-form-custom" action="search_results">
                         <div class="form-group">
-                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                            <input type="text" placeholder="Search for something..." class="form-control"
+                                   name="top-search" id="top-search">
                         </div>
                     </form>
                 </div>
@@ -139,26 +165,27 @@
             </div>
             <div class='col-lg-12'>
 
-                <div class='demo'><img src="http://scidiet-1252946747.file.myqcloud.com/img/index.jpg"  alt="主页" ></div>
+                <div class='demo'><img src="http://scidiet-1252946747.file.myqcloud.com/img/index.jpg" alt="主页"></div>
 
             </div>
-            <div >
+            <div>
                 <div class="statistic-box">
 
 
                     <div class="row text-center">
-                        <div  style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;"> <a href="layouts">
-                            <button class="btn btn-primary btn-lg">品牌理念</button>
-                        </a>
+                        <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
+                            <a href="layouts">
+                                <button class="btn btn-primary btn-lg">品牌理念</button>
+                            </a>
                         </div>
                         <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
                             <a href="profile">
-                            <button class="btn btn-primary btn-lg">个人中心</button>
+                                <button class="btn btn-primary btn-lg">个人中心</button>
                             </a>
                         </div>
                         <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
                             <a href="recommend">
-                            <button class="btn btn-primary btn-lg">智能推荐</button>
+                                <button class="btn btn-primary btn-lg">智能推荐</button>
                             </a>
                         </div>
                     </div>
@@ -198,9 +225,9 @@
                                     <div>
 
 
-                                        <font size="3" >
+                                        <font size="3">
                                             <marquee>为了更全面地了解您的饮食信息，建议长期使用、每餐使用智能推荐！</marquee>
-                                        </font>                                   </div>
+                                        </font></div>
                                 </div>
                             </div>
                             <div class="ibox float-e-margins">
@@ -224,21 +251,17 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div>
 
-                                    <img src="http://scidiet-1252946747.file.myqcloud.com/img/article1.jpg" height="200" width="300" />
-                                    <img src="http://scidiet-1252946747.file.myqcloud.com/img/article2.jpg" height="200" width="300" />
 
-                                </div>
                             </div>
+                            <img src="http://scidiet-1252946747.file.myqcloud.com/img/article1.jpg" alt="" style="float:right" width="50%">
+                            <img src="http://scidiet-1252946747.file.myqcloud.com/img/article2.jpg" alt="" style="float:left" width="50%">
                         </div>
                         <div>
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
                                     <h5>精选菜品</h5>
-                                    <div class="ibox-tools">
-                                        <span class="label label-warning-light pull-right">10 Messages</span>
-                                    </div>
+
                                 </div>
                                 <div class="ibox-content">
 
@@ -250,9 +273,8 @@
                                                     <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/menu1.png">
                                                 </a>
                                                 <div class="media-body ">
-                                                    <small class="pull-right">5m ago</small>
-                                                    <strong>玉米炒葡萄</strong> posted a new blog. <br>
-                                                    <small class="text-muted">Today 5:60 pm - 12.06.2014</small>
+
+                                                    <strong>玉米炒葡萄</strong>
 
                                                 </div>
                                             </div>
@@ -262,9 +284,8 @@
                                                     <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/menu2.png">
                                                 </a>
                                                 <div class="media-body ">
-                                                    <small class="pull-right">2h ago</small>
-                                                    <strong>原谅色大鸡腿</strong> posted message on <strong>Monica Smith</strong> site. <br>
-                                                    <small class="text-muted">Today 2:10 pm - 12.06.2014</small>
+
+                                                    <strong>原谅色大鸡腿</strong>
                                                 </div>
                                             </div>
                                             <div class="feed-element">
@@ -272,9 +293,8 @@
                                                     <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/menu3.png">
                                                 </a>
                                                 <div class="media-body ">
-                                                    <small class="pull-right">2h ago</small>
-                                                    <strong>桂花山药</strong> add 1 photo on <strong>Monica Smith</strong>. <br>
-                                                    <small class="text-muted">2 days ago at 8:30am</small>
+
+                                                    <strong>桂花山药</strong>
                                                 </div>
                                             </div>
                                             <div class="feed-element">
@@ -282,19 +302,17 @@
                                                     <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/menu4.png">
                                                 </a>
                                                 <div class="media-body ">
-                                                    <small class="pull-right text-navy">5h ago</small>
-                                                    <strong>番茄炖蛋</strong> started following <strong>Monica Smith</strong>. <br>
-                                                    <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-                                                    <div class="actions">
-                                                        <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>
-                                                        <a class="btn btn-xs btn-white"><i class="fa fa-heart"></i> Love</a>
-                                                    </div>
+
+                                                    <strong>番茄炖蛋</strong>
+
                                                 </div>
                                             </div>
 
                                         </div>
 
-                                        <button class="btn btn-primary btn-block m-t"><i class="fa fa-arrow-down"></i> Show More</button>
+                                        <button class="btn btn-primary btn-block m-t"><i class="fa fa-arrow-down"></i>
+                                            Show More
+                                        </button>
 
                                     </div>
 
@@ -335,12 +353,14 @@
                                                   <br/>
                                                   <small class="text-navy">2 hour ago</small>
                                               </div> -->
-                                            <div >
+                                            <div>
 
 
-                                                <p>Sci-diet与食俱进公司致力于帮助个人建立合理膳食计划，以实现营养均衡、合理塑形等膳食目标。对于不方便自行烹饪的学生、白领等，根据具体的就餐地点、饮食需求、饮食习惯和个人身体状况，科学地给出每一餐主食及配菜的推荐，在现有条件下实现膳食最大合理化。</p>
+                                                <p>
+                                                    Sci-diet与食俱进公司致力于帮助个人建立合理膳食计划，以实现营养均衡、合理塑形等膳食目标。对于不方便自行烹饪的学生、白领等，根据具体的就餐地点、饮食需求、饮食习惯和个人身体状况，科学地给出每一餐主食及配菜的推荐，在现有条件下实现膳食最大合理化。</p>
 
-                                                <p><span data-diameter="40" class="updating-chart">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,4,7,3,2,9,8,7,4,5,1,2,9,5,4,7,2,7,7,3,5,2</span></p>
+                                                <p><span data-diameter="40" class="updating-chart">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,4,7,3,2,9,8,7,4,5,1,2,9,5,4,7,2,7,7,3,5,2</span>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -436,6 +456,84 @@
         </div>
 
     </div>
+    <div class="small-chat-box fadeInRight animated">
+
+        <div class="heading" draggable="true">
+            <small class="chat-date pull-right">
+                02.19.2015
+            </small>
+            Small chat
+        </div>
+
+        <div class="content">
+
+            <div class="left">
+                <div class="author-name">
+                    Monica Jackson
+                    <small class="chat-date">
+                        10:02 am
+                    </small>
+                </div>
+                <div class="chat-message active">
+                    Lorem Ipsum is simply dummy text input.
+                </div>
+
+            </div>
+            <div class="right">
+                <div class="author-name">
+                    Mick Smith
+                    <small class="chat-date">
+                        11:24 am
+                    </small>
+                </div>
+                <div class="chat-message">
+                    Lorem Ipsum is simpl.
+                </div>
+            </div>
+            <div class="left">
+                <div class="author-name">
+                    Alice Novak
+                    <small class="chat-date">
+                        08:45 pm
+                    </small>
+                </div>
+                <div class="chat-message active">
+                    Check this stock char.
+                </div>
+            </div>
+            <div class="right">
+                <div class="author-name">
+                    Anna Lamson
+                    <small class="chat-date">
+                        11:24 am
+                    </small>
+                </div>
+                <div class="chat-message">
+                    The standard chunk of Lorem Ipsum
+                </div>
+            </div>
+            <div class="left">
+                <div class="author-name">
+                    Mick Lane
+                    <small class="chat-date">
+                        08:45 pm
+                    </small>
+                </div>
+                <div class="chat-message active">
+                    I belive that. Lorem Ipsum is simply dummy text.
+                </div>
+            </div>
+
+
+        </div>
+        <div class="form-chat">
+            <div class="input-group input-group-sm"><input type="text" class="form-control"> <span
+                    class="input-group-btn"> <button
+                    class="btn btn-primary" type="button">Send
+                </button> </span></div>
+        </div>
+
+    </div>
 
     <div id="right-sidebar">
         <div class="sidebar-container">
@@ -459,7 +557,7 @@
                 <div id="tab-1" class="tab-pane active">
 
                     <div class="sidebar-title">
-                        <h3> <i class="fa fa-comments-o"></i> Latest Notes</h3>
+                        <h3><i class="fa fa-comments-o"></i> Latest Notes</h3>
                         <small><i class="fa fa-tim"></i> You have 10 new message.</small>
                     </div>
 
@@ -507,7 +605,8 @@
                                     </div>
                                 </div>
                                 <div class="media-body">
-                                    Mevolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                    Mevolved over the years, sometimes by accident, sometimes on purpose (injected
+                                    humour and the like).
                                     <br>
                                     <small class="text-muted">Yesterday 1:10 pm</small>
                                 </div>
@@ -545,7 +644,8 @@
                                     <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a7.jpg">
                                 </div>
                                 <div class="media-body">
-                                    Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                                    Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
+                                    from a line in section 1.10.32.
                                     <br>
                                     <small class="text-muted">Yesterday 2:45 pm</small>
                                 </div>
@@ -588,7 +688,7 @@
                 <div id="tab-2" class="tab-pane">
 
                     <div class="sidebar-title">
-                        <h3> <i class="fa fa-cube"></i> Latest projects</h3>
+                        <h3><i class="fa fa-cube"></i> Latest projects</h3>
                         <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
                     </div>
 
@@ -719,7 +819,8 @@
                     </span>
                         <div class="switch">
                             <div class="onoffswitch">
-                                <input type="checkbox" name="collapsemenu" checked class="onoffswitch-checkbox" id="example2">
+                                <input type="checkbox" name="collapsemenu" checked class="onoffswitch-checkbox"
+                                       id="example2">
                                 <label class="onoffswitch-label" for="example2">
                                     <span class="onoffswitch-inner"></span>
                                     <span class="onoffswitch-switch"></span>
@@ -761,7 +862,8 @@
                     </span>
                         <div class="switch">
                             <div class="onoffswitch">
-                                <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example5">
+                                <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox"
+                                       id="example5">
                                 <label class="onoffswitch-label" for="example5">
                                     <span class="onoffswitch-inner"></span>
                                     <span class="onoffswitch-switch"></span>
@@ -775,7 +877,8 @@
                     </span>
                         <div class="switch">
                             <div class="onoffswitch">
-                                <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+                                <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox"
+                                       id="example6">
                                 <label class="onoffswitch-label" for="example6">
                                     <span class="onoffswitch-inner"></span>
                                     <span class="onoffswitch-switch"></span>
@@ -802,7 +905,8 @@
                         <h4>Settings</h4>
                         <div class="small">
                             I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            And typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            And typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                            the 1500s.
                             Over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
                         </div>
                     </div>
@@ -811,7 +915,6 @@
             </div>
 
         </div>
-
 
 
     </div>
@@ -855,8 +958,6 @@
 
 <!-- Toastr -->
 <script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/toastr/toastr.min.js"></script>
-
-
 
 
 </body>
