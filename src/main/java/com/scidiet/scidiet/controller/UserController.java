@@ -233,7 +233,8 @@ public class UserController extends BaseController {
         List<Food> list = foodMapper.getAllFood();
         Collections.shuffle(list);
         User user = userMapper.selectByPrimaryKey(getUserId());
-        int isDinner = meal.equals("dinner") ? 1 : 0;
+        //int isDinner = meal.equals("dinner") ? 1 : 0;
+        int isDinner = (Calendar.getInstance().getTimeInMillis()%(60*60*24))>(14*60*60)?1:0;
         list = list.stream().filter(food -> food.getLocation().equals(place) && food.getIsDinner().equals(isDinner)).collect(Collectors.toList());
         List<Food> su = list.stream().filter(food -> food.getIsVegetable().equals(1)).collect(Collectors.toList());
         List<Food> hun = list.stream().filter(food -> food.getIsVegetable().equals(0)).collect(Collectors.toList());

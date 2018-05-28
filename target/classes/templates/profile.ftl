@@ -86,7 +86,7 @@
                 <#if userId!=0>
                     <li>
                         <a class="right-sidebar-toggle">
-                            你好 ${user.name}
+                            您好 ${user.name}
                         </a>
                     </li>
                     <li>
@@ -99,7 +99,7 @@
                 <#else>
                     <li>
                         <a class="right-sidebar-toggle">
-                            你好 游客
+                            您好 游客
                         </a>
                     </li>
                     <ul class="nav pull-right">

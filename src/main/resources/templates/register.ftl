@@ -43,7 +43,9 @@
             <div class="form-group" >
                 <input type="text" name="name" id="name" placeholder="昵称" class="form-control" >
             </div>
-
+            <div class="form-group" >
+                <input type="text" name="name" id="schoolName" placeholder="学校名称" class="form-control" >
+            </div>
 
             <button type="submit" onclick="register();return false;" class="btn btn-primary block full-width m-b">注册</button>
 

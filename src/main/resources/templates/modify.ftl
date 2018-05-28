@@ -85,7 +85,7 @@
                 <#if userId!=0>
                     <li>
                         <a class="right-sidebar-toggle">
-                            你好 ${user.name}
+                            您好 ${user.name}
                         </a>
                     </li>
                     <li>
@@ -98,7 +98,7 @@
                 <#else>
                     <li>
                         <a class="right-sidebar-toggle">
-                            你好 游客
+                            您好 游客
                         </a>
                     </li>
                     <ul class="nav pull-right">
@@ -156,7 +156,27 @@
                         <input type="radio" name="work_type" id = "work_type4" value="中等体力劳动">中等体力劳动
                         <input type="radio" name="work_type" id = "work_type5" value="重脑力劳动">重脑力劳动
                         <input type="radio" name="work_type" id = "work_type6" value="重体力劳动">重体力劳动
+                </div>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-9">
+                    <h2>饮食需求</h2>
+                    <input type="checkbox" name="demand" value="减肥" >减肥&nbsp;
+                    <input type="checkbox" name="demand" value="增肌">增肌&nbsp;
+                    <input type="checkbox" name="demand" value="塑形">塑形&nbsp;
+                    <input type="checkbox" name="demand" value="美容">美容&nbsp;
+                    <input type="checkbox" name="demand" value="加强营养">加强营养
 
+                </div>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-9">
+                    <h2>饮食偏好</h2>
+                    <input type="checkbox" name="preference" value="清淡" >清淡&nbsp;
+                    <input type="checkbox" name="preference" value="偏甜">偏甜&nbsp;
+                    <input type="checkbox" name="preference" value="偏辣">偏辣&nbsp;
+                    <input type="checkbox" name="preference" value="偏咸">偏咸&nbsp;
+                    <input type="checkbox" name="preference" value="无特殊要求">无特殊要求
                 </div>
             </div>
             <div class="row wrapper border-bottom white-bg page-heading">

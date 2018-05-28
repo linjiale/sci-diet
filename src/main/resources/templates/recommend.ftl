@@ -85,7 +85,7 @@
                 <#if userId!=0>
                     <li>
                         <a class="right-sidebar-toggle">
-                            你好 ${user.name}
+                            您好 ${user.name}
                         </a>
                     </li>
                     <li>
@@ -98,7 +98,7 @@
                 <#else>
                     <li>
                         <a class="right-sidebar-toggle">
-                            你好 游客
+                            您好 游客
                         </a>
                     </li>
                     <ul class="nav pull-right">
@@ -122,11 +122,10 @@
             </nav>
         </div>
         <form action="/recommendAction">
-            <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="row wrapper border-bottom white-bg page-heading"hidden>
                 <div class="col-lg-9">
                     <h2>饮食需求</h2>
-
-                    <input type="radio" name="demand" value="减肥">减肥&nbsp;
+                    <input type="radio" name="demand" value="减肥" checked>减肥&nbsp;
                     <input type="radio" name="demand" value="增肌">增肌&nbsp;
                     <input type="radio" name="demand" value="塑形">塑形&nbsp;
                     <input type="radio" name="demand" value="美容">美容&nbsp;
@@ -134,10 +133,10 @@
 
                 </div>
             </div>
-            <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="row wrapper border-bottom white-bg page-heading"hidden>
                 <div class="col-lg-9">
                     <h2>饮食偏好</h2>
-                    <input type="radio" name="preference" value="清淡">清淡&nbsp;
+                    <input type="radio" name="preference" value="清淡" checked>清淡&nbsp;
                     <input type="radio" name="preference" value="偏甜">偏甜&nbsp;
                     <input type="radio" name="preference" value="偏辣">偏辣&nbsp;
                     <input type="radio" name="preference" value="偏咸">偏咸&nbsp;
@@ -147,17 +146,17 @@
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-9">
                     <h2>就餐地点</h2>
-                    <input type="radio" name="place" value="冬月厅（河东）">冬月厅（河东）
+                    <input type="radio" name="place" value="冬月厅（河东）" checked>冬月厅（河东）
                     <input type="radio" name="place" value="冬日厅（河西）">冬日厅（河西）
                     <input type="radio" name="place" value="夏雨厅">夏雨厅
                     <input type="radio" name="place" value="秋实阁">秋实阁
                 </div>
             </div>
-            <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="row wrapper border-bottom white-bg page-heading"hidden>
                 <div class="col-lg-9">
                     <h2>就餐属性</h2>
                     <input type="radio" name="meal" value="早餐" hidden>
-                    <input type="radio" name="meal" value="lunch">午餐&nbsp;
+                    <input type="radio" name="meal" value="lunch"checked>午餐&nbsp;
                     <input type="radio" name="meal" value="dinner">晚餐
                 </div>
             </div>
@@ -165,7 +164,7 @@
                 <div class="col-lg-9">
                     <h2>荤菜数量</h2>
                     <input type="radio" name="meat" value="0" >0&nbsp;
-                    <input type="radio" name="meat" value="1">1&nbsp;
+                    <input type="radio" name="meat" value="1"checked>1&nbsp;
                     <input type="radio" name="meat" value="2">2
                 </div>
             </div>
@@ -174,9 +173,18 @@
                     <h2>素菜数量</h2>
                     <input type="radio" name="vegetable" value="0" >0&nbsp;
                     <input type="radio" name="vegetable" value="1">1&nbsp;
-                    <input type="radio" name="vegetable" value="2">2
+                    <input type="radio" name="vegetable" value="2"checked>2
                 </div>
             </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-9">
+                    <h2>您是否由于就餐时间紧张而对配菜有特殊要求?（例如拒绝鱼虾等耗时食物）</h2>
+                    <input type="radio" name="timeLimit" value="0" >是&nbsp;
+                    <input type="radio" name="timeLimit" value="1">否&nbsp;
+
+                </div>
+            </div>
+
             <button type="submit" class="btn btn-block btn-outline btn-primary">开启智能推荐</button>
             </a>
         </form>
