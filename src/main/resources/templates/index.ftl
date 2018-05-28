@@ -66,7 +66,8 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/profile_small.jpg"/>
+                            <img alt="image" class="img-circle"
+                                 src="http://scidiet-1252946747.file.myqcloud.com/img/profile_small.jpg"/>
                              </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear"> <span class="block m-t-xs"> <strong
@@ -137,10 +138,11 @@
                 <#if userId!=0>
                     <li>
                         <a class="right-sidebar-toggle">
-                            <i class="fa fa-tasks"> </i> 你好 ${user.name}
+                            你好 ${user.name}
                         </a>
                     </li>
                     <li>
+
                         <a href="login">
 
                             <i class="fa fa-sign-out"></i> 注销
@@ -148,10 +150,22 @@
                     </li>
                 <#else>
                     <li>
-                        <a href="login">
-                            <i class="fa fa-sign-out"></i> 登录
+                        <a class="right-sidebar-toggle">
+                            你好 游客
                         </a>
                     </li>
+                    <ul class="nav pull-right">
+                        <li>
+                            <a href="login">
+                                登录
+                            </a>
+                        </li>
+                        <li>
+                            <a href="register">
+                                注册
+                            </a>
+                        </li>
+                    </ul>
                 </#if>
                 </ul>
 
@@ -174,20 +188,21 @@
 
                     <div class="row text-center">
                         <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
-                            <a href="layouts">
-                                <button class="btn btn-primary btn-lg">品牌理念</button>
+                            <a <#if userId==0>href="login" <#else >onclick="alert('你还不是vip用户');"</#if>>
+                                <button class="btn btn-primary btn-lg">健康商店</button>
                             </a>
                         </div>
                         <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
-                            <a href="profile">
-                                <button class="btn btn-primary btn-lg">个人中心</button>
-                            </a>
-                        </div>
-                        <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
-                            <a href="recommend">
+                            <a href="userIndex">
                                 <button class="btn btn-primary btn-lg">智能推荐</button>
                             </a>
                         </div>
+                        <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
+                            <a <#if userId==0>href="login"<#else >onclick="alert('你还不是vip用户');" </#if>>
+                                <button class="btn btn-primary btn-lg">运动社区</button>
+                            </a>
+                        </div>
+
                     </div>
 
 
@@ -254,8 +269,10 @@
 
 
                             </div>
-                            <img src="http://scidiet-1252946747.file.myqcloud.com/img/article1.jpg" alt="" style="float:right" width="50%">
-                            <img src="http://scidiet-1252946747.file.myqcloud.com/img/article2.jpg" alt="" style="float:left" width="50%">
+                            <img src="http://scidiet-1252946747.file.myqcloud.com/img/article1.jpg" alt=""
+                                 style="float:right" width="50%">
+                            <img src="http://scidiet-1252946747.file.myqcloud.com/img/article2.jpg" alt=""
+                                 style="float:left" width="50%">
                         </div>
                         <div>
                             <div class="ibox float-e-margins">
@@ -270,7 +287,8 @@
 
                                             <div class="feed-element">
                                                 <a href="profile" class="pull-left">
-                                                    <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/menu1.png">
+                                                    <img alt="image" class="img-circle"
+                                                         src="http://scidiet-1252946747.file.myqcloud.com/img/menu1.png">
                                                 </a>
                                                 <div class="media-body ">
 
@@ -281,7 +299,8 @@
 
                                             <div class="feed-element">
                                                 <a href="profile" class="pull-left">
-                                                    <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/menu2.png">
+                                                    <img alt="image" class="img-circle"
+                                                         src="http://scidiet-1252946747.file.myqcloud.com/img/menu2.png">
                                                 </a>
                                                 <div class="media-body ">
 
@@ -290,7 +309,8 @@
                                             </div>
                                             <div class="feed-element">
                                                 <a href="profile" class="pull-left">
-                                                    <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/menu3.png">
+                                                    <img alt="image" class="img-circle"
+                                                         src="http://scidiet-1252946747.file.myqcloud.com/img/menu3.png">
                                                 </a>
                                                 <div class="media-body ">
 
@@ -299,7 +319,8 @@
                                             </div>
                                             <div class="feed-element">
                                                 <a href="profile" class="pull-left">
-                                                    <img alt="image" class="img-circle" src="http://scidiet-1252946747.file.myqcloud.com/img/menu4.png">
+                                                    <img alt="image" class="img-circle"
+                                                         src="http://scidiet-1252946747.file.myqcloud.com/img/menu4.png">
                                                 </a>
                                                 <div class="media-body ">
 
@@ -566,7 +587,8 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a1.jpg">
+                                    <img alt="image" class="img-circle message-avatar"
+                                         src="http://scidiet-1252946747.file.myqcloud.com/img/a1.jpg">
 
                                     <div class="m-t-xs">
                                         <i class="fa fa-star text-warning"></i>
@@ -584,7 +606,8 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a2.jpg">
+                                    <img alt="image" class="img-circle message-avatar"
+                                         src="http://scidiet-1252946747.file.myqcloud.com/img/a2.jpg">
                                 </div>
                                 <div class="media-body">
                                     The point of using Lorem Ipsum is that it has a more-or-less normal.
@@ -596,7 +619,8 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a3.jpg">
+                                    <img alt="image" class="img-circle message-avatar"
+                                         src="http://scidiet-1252946747.file.myqcloud.com/img/a3.jpg">
 
                                     <div class="m-t-xs">
                                         <i class="fa fa-star text-warning"></i>
@@ -615,7 +639,8 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a4.jpg">
+                                    <img alt="image" class="img-circle message-avatar"
+                                         src="http://scidiet-1252946747.file.myqcloud.com/img/a4.jpg">
                                 </div>
 
                                 <div class="media-body">
@@ -628,7 +653,8 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a8.jpg">
+                                    <img alt="image" class="img-circle message-avatar"
+                                         src="http://scidiet-1252946747.file.myqcloud.com/img/a8.jpg">
                                 </div>
                                 <div class="media-body">
 
@@ -641,7 +667,8 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a7.jpg">
+                                    <img alt="image" class="img-circle message-avatar"
+                                         src="http://scidiet-1252946747.file.myqcloud.com/img/a7.jpg">
                                 </div>
                                 <div class="media-body">
                                     Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
@@ -654,7 +681,8 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a3.jpg">
+                                    <img alt="image" class="img-circle message-avatar"
+                                         src="http://scidiet-1252946747.file.myqcloud.com/img/a3.jpg">
 
                                     <div class="m-t-xs">
                                         <i class="fa fa-star text-warning"></i>
@@ -672,7 +700,8 @@
                         <div class="sidebar-message">
                             <a href="#">
                                 <div class="pull-left text-center">
-                                    <img alt="image" class="img-circle message-avatar" src="http://scidiet-1252946747.file.myqcloud.com/img/a4.jpg">
+                                    <img alt="image" class="img-circle message-avatar"
+                                         src="http://scidiet-1252946747.file.myqcloud.com/img/a4.jpg">
                                 </div>
                                 <div class="media-body">
                                     Uncover many web sites still in their infancy. Various versions have.

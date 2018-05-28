@@ -86,10 +86,11 @@
                 <#if userId!=0>
                     <li>
                         <a class="right-sidebar-toggle">
-                            <i class="fa fa-tasks"> </i> 你好 ${user.name}
+                            你好 ${user.name}
                         </a>
                     </li>
                     <li>
+
                         <a href="login">
 
                             <i class="fa fa-sign-out"></i> 注销
@@ -97,10 +98,22 @@
                     </li>
                 <#else>
                     <li>
-                        <a href="login">
-                            <i class="fa fa-sign-out"></i> 登录
+                        <a class="right-sidebar-toggle">
+                            你好 游客
                         </a>
                     </li>
+                    <ul class="nav pull-right">
+                        <li>
+                            <a href="login">
+                                登录
+                            </a>
+                        </li>
+                        <li>
+                            <a href="register">
+                                注册
+                            </a>
+                        </li>
+                    </ul>
                 </#if>
 
 

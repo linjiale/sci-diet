@@ -188,21 +188,21 @@
 
                     <div class="row text-center">
                         <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
-                            <a <#if userId==0>href="login" <#else >onclick="alert('你还不是vip用户');"</#if>>
-                                <button class="btn btn-primary btn-lg">健康商店</button>
-                            </a>
-                        </div>
-                        <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
-                            <a href="userIndex">
-                                <button class="btn btn-primary btn-lg">智能推荐</button>
-                            </a>
-                        </div>
-                        <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
-                            <a <#if userId==0>href="login"<#else >onclick="alert('你还不是vip用户');" </#if>>
-                                <button class="btn btn-primary btn-lg">运动社区</button>
+                            <a href="layouts">
+                                <button class="btn btn-primary btn-lg">品牌理念</button>
                             </a>
                         </div>
 
+                        <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
+                            <a href="profile">
+                                <button class="btn btn-primary btn-lg">个人中心</button>
+                            </a>
+                        </div>
+                        <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
+                            <a href="recommend">
+                                <button class="btn btn-primary btn-lg">开始选菜</button>
+                            </a>
+                        </div>
                     </div>
 
 
