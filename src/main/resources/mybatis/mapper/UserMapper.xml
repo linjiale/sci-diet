@@ -15,6 +15,8 @@
     <result column="allergy" jdbcType="VARCHAR" property="allergy" />
     <result column="love_food" jdbcType="VARCHAR" property="loveFood" />
     <result column="hate_food" jdbcType="VARCHAR" property="hateFood" />
+    <result column="last_login_time" jdbcType="TIMESTAMP" property="lastLoginTime" />
+
   </resultMap>
   <sql id="Base_Column_List">
     id, account, password, name, email, phone, sex, age, BMI, work_type, allergy, love_food, 

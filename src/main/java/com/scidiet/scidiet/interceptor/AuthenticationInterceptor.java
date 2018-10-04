@@ -20,7 +20,6 @@ public class AuthenticationInterceptor extends BaseInterceptor {
         if (handler.getClass().isAssignableFrom(HandlerMethod.class)) {
             HandlerMethod handlerMethod = (HandlerMethod) handler;
             Authentication authentication = ((HandlerMethod) handler).getMethodAnnotation(Authentication.class);
-
             //没有声明需要权限,或者声明不验证权限
             if (authentication == null) {
                 return true;

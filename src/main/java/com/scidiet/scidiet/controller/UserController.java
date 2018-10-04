@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import javax.xml.crypto.Data;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -36,6 +37,7 @@ public class UserController extends BaseController {
     public String index(Map<String, Object> model) {
         return "index";
     }
+
     @RequestMapping(value = "/userIndex")
     public String userIndex(Map<String, Object> model) {
         return "userIndex";
@@ -66,15 +68,18 @@ public class UserController extends BaseController {
         return "layouts";
     }
 
+    @RequestMapping(value = "/questionnaire")
+    public String questionnaire(Map<String, Object> model) {
+        return "questionnaire";
+    }
     @RequestMapping(value = "/metrics")
     public String metrics(Map<String, Object> model) {
 
         HttpSession session = servletRequest.getSession();
-        if(session.getAttribute("foodList")!=null)
+        if (session.getAttribute("foodList") != null)
             return "metrics";
-        else
-        {
-          //  session.setAttribute("legal","0");
+        else {
+            //  session.setAttribute("legal","0");
             return "recommend";
         }
     }
@@ -127,11 +132,11 @@ public class UserController extends BaseController {
         List<User> list = userMapper.getAllUsers();
         BaseJsonResponse baseJsonResponse = new BaseJsonResponse();
         for (User item : list)
-            if (user.getEmail().equals(item.getEmail())&&!user.getEmail().equals("")) {
+            if (user.getEmail().equals(item.getEmail()) && !user.getEmail().equals("")) {
                 baseJsonResponse.setReturnCode("1.0");
                 baseJsonResponse.setErrorMessage("失败");
                 return baseJsonResponse;
-            } else if (user.getPhone().equals(item.getPhone())&&!user.getPhone().equals("")) {
+            } else if (user.getPhone().equals(item.getPhone()) && !user.getPhone().equals("")) {
                 baseJsonResponse.setReturnCode("2.0");
                 baseJsonResponse.setErrorMessage("失败");
                 return baseJsonResponse;
@@ -154,13 +159,33 @@ public class UserController extends BaseController {
         List<User> list = userMapper.getAllUsers();
         BaseJsonResponse baseJsonResponse = new BaseJsonResponse();
         HttpSession session = servletRequest.getSession();
-
+        session.setAttribute("goQuestion", 0);
         for (User item : list) {
             if (account.equals(item.getEmail()) || account.equals(item.getAccount()) || account.equals(item.getPhone())) {
                 if (password.equals(item.getPassword())) {
                     baseJsonResponse.setReturnCode("3.0");
                     baseJsonResponse.setErrorMessage("成功");
                     session.setAttribute("userId", item.getId());
+                    if (item.getLastLoginTime() != null) {
+                        Calendar now = Calendar.getInstance();
+                        Calendar lastTime = Calendar.getInstance();
+                        lastTime.setTime(item.getLastLoginTime());
+                        int weekOfYear = now.get(Calendar.WEEK_OF_YEAR);
+                        int weekOfYear2 = lastTime.get(Calendar.WEEK_OF_YEAR);
+                        int dayOfWeek = now.get(Calendar.DAY_OF_WEEK);
+                        int dayRange = now.get(Calendar.DAY_OF_YEAR) - lastTime.get(Calendar.DAY_OF_YEAR);
+                        if ((dayOfWeek == 7 && dayRange > 0) ||
+                                (dayOfWeek == 1 && dayRange > 1)) {
+                            session.setAttribute("goQuestion", 1);
+                        }
+                        if(weekOfYear!=weekOfYear2)
+                            session.setAttribute("goQuestion", 2);
+                    }
+                    else
+                        session.setAttribute("goQuestion", 2);
+                    User user = item;
+                    user.setLastLoginTime(new Date());
+                    userMapper.updateByPrimaryKey(user);
                     return baseJsonResponse;
                 } else {
                     baseJsonResponse.setReturnCode("2.0");
@@ -202,6 +227,17 @@ public class UserController extends BaseController {
         return baseJsonResponse;
     }
 
+    @RequestMapping(value = "/removeQuestion")
+    @ResponseBody
+    public BaseJsonResponse removeQuestion() {
+        BaseJsonResponse baseJsonResponse = new BaseJsonResponse();
+        HttpSession session = servletRequest.getSession();
+        baseJsonResponse.setErrorMessage("成功");
+        session.setAttribute("goQuestion", 0);
+        System.out.println("remove");
+        return baseJsonResponse;
+    }
+
     @RequestMapping(value = "/edit")
     public String edit(@RequestParam(value = "sex", defaultValue = "") String sex,
                        @RequestParam(value = "age", defaultValue = "0") String age,
@@ -234,47 +270,46 @@ public class UserController extends BaseController {
         Collections.shuffle(list);
         User user = userMapper.selectByPrimaryKey(getUserId());
         //int isDinner = meal.equals("dinner") ? 1 : 0;
-        int isDinner = (Calendar.getInstance().getTimeInMillis()%(60*60*24))>(14*60*60)?1:0;
+        int isDinner = (Calendar.getInstance().getTimeInMillis() % (60 * 60 * 24)) > (14 * 60 * 60) ? 1 : 0;
         list = list.stream().filter(food -> food.getLocation().equals(place) && food.getIsDinner().equals(isDinner)).collect(Collectors.toList());
         List<Food> su = list.stream().filter(food -> food.getIsVegetable().equals(1)).collect(Collectors.toList());
         List<Food> hun = list.stream().filter(food -> food.getIsVegetable().equals(0)).collect(Collectors.toList());
-        List<List<Food>> hunCollections = FunctionBean.getFoodList(hun,meat);
-        List<List<Food>> suCollections = FunctionBean.getFoodList(su,vegetable);
+        List<List<Food>> hunCollections = FunctionBean.getFoodList(hun, meat);
+        List<List<Food>> suCollections = FunctionBean.getFoodList(su, vegetable);
         Collections.shuffle(hunCollections);
         Collections.shuffle(suCollections);
-        if(hunCollections.size()>100)
-            hunCollections = hunCollections.subList(0,100);
-        if(suCollections.size()>100)
-            suCollections = suCollections.subList(0,100);
+        if (hunCollections.size() > 100)
+            hunCollections = hunCollections.subList(0, 100);
+        if (suCollections.size() > 100)
+            suCollections = suCollections.subList(0, 100);
         List<List<Food>> finalCollections = new ArrayList<>();
-        for(List<Food> a:suCollections)
-            for(List<Food> b:hunCollections)
-        {
-            List<Food>c = new ArrayList<>();
-            c.addAll(a);
-            c.addAll(b);
-            finalCollections.add(c);
-        }
-        if(suCollections.size()==0)
-            finalCollections=hunCollections;
-        if(hunCollections.size()==0)
-            finalCollections=suCollections;
+        for (List<Food> a : suCollections)
+            for (List<Food> b : hunCollections) {
+                List<Food> c = new ArrayList<>();
+                c.addAll(a);
+                c.addAll(b);
+                finalCollections.add(c);
+            }
+        if (suCollections.size() == 0)
+            finalCollections = hunCollections;
+        if (hunCollections.size() == 0)
+            finalCollections = suCollections;
         finalCollections.sort(new Comparator<List<Food>>() {
             @Override
             public int compare(List<Food> o1, List<Food> o2) {
                 double[] n1 = FunctionBean.getNu(o1);
                 double[] n2 = FunctionBean.getNu(o2);
                 double ans = 0;
-                for(int i=0;i<n1.length;i++)
-                    ans+=n1[i]-n2[i];
-                return (int)ans;
+                for (int i = 0; i < n1.length; i++)
+                    ans += n1[i] - n2[i];
+                return (int) ans;
             }
         });
         Collections.shuffle(finalCollections);
-        if(finalCollections.size()>10)
-         finalCollections = finalCollections.subList(0,10);
+        if (finalCollections.size() > 10)
+            finalCollections = finalCollections.subList(0, 10);
         HttpSession session = servletRequest.getSession();
-        session.setAttribute("foodList",finalCollections);
+        session.setAttribute("foodList", finalCollections);
         return "metrics";
     }
 
@@ -291,7 +326,7 @@ public class UserController extends BaseController {
         List<Food> list = foodMapper.getAllFood();
         list = list.stream().filter(food -> (food.getLocation().equals(canteenAdmin.getLocation()) && food.getIsDinner() == isDinner)).collect(Collectors.toList());
         model.put("list", list);
-        model.put("isDinner",isDinner);
+        model.put("isDinner", isDinner);
         return "getAvailable";
     }
 
@@ -306,16 +341,13 @@ public class UserController extends BaseController {
         List<Food> list = foodMapper.getAllFood();
         list = list.stream().filter(food -> (food.getLocation().equals(canteenAdmin.getLocation()) && food.getIsDinner() == isDinner)).collect(Collectors.toList());
         List<Integer> list2 = list.stream().filter(food -> foodList.contains(food.getName())).map(Food::getId).collect(Collectors.toList());
-        if(list2.size()>0)
-        foodMapper.updateIsAvailable(list2);
+        if (list2.size() > 0)
+            foodMapper.updateIsAvailable(list2);
         list2 = list.stream().filter(food -> !foodList.contains(food.getName())).map(Food::getId).collect(Collectors.toList());
-        if(list2.size()>0)
-        foodMapper.updateIsNotAvailable(list2);
+        if (list2.size() > 0)
+            foodMapper.updateIsNotAvailable(list2);
         return "chooseLunch";
     }
 
-
-
-  
 
 }

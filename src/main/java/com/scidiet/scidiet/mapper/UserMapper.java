@@ -33,7 +33,7 @@ public interface UserMapper {
     @Select({
         "select",
         "id, account, password, name, email, phone, sex, age, BMI, work_type, allergy, ",
-        "love_food, hate_food",
+        "love_food, hate_food,last_login_time",
         "from user",
         "where id = #{id,jdbcType=INTEGER}"
     })
@@ -55,7 +55,8 @@ public interface UserMapper {
           "work_type = #{workType,jdbcType=VARCHAR},",
           "allergy = #{allergy,jdbcType=VARCHAR},",
           "love_food = #{loveFood,jdbcType=VARCHAR},",
-          "hate_food = #{hateFood,jdbcType=VARCHAR}",
+          "hate_food = #{hateFood,jdbcType=VARCHAR},",
+            "last_login_time = #{lastLoginTime,jdbcType=VARCHAR}",
         "where id = #{id,jdbcType=INTEGER}"
     })
     int updateByPrimaryKey(User record);

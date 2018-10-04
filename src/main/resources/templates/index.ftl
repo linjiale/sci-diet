@@ -59,7 +59,7 @@
         height: 62.5%;
     }
 </style>
-<body>
+<body onload="goQuestion()">
 <div id="wrapper">
     <nav class="navbar-default navbar-static-side" role="navigation">
         <div class="sidebar-collapse">
@@ -344,7 +344,7 @@
                         <div>
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
-                                    <h5>公司简介</h5>
+                                    <h5>品牌理念</h5>
                                     <div class="ibox-tools">
                                         <a class="collapse-link">
                                             <i class="fa fa-chevron-up"></i>
@@ -363,23 +363,22 @@
                                         </a>
                                     </div>
                                 </div>
-
                                 <div class="ibox-content inspinia-timeline">
-
                                     <div>
                                         <div class="row">
-                                            <!--   <div class="col-xs-3 date">
-                                                  <i class="fa fa-briefcase"></i>
-                                                  6:00 am
-                                                  <br/>
-                                                  <small class="text-navy">2 hour ago</small>
-                                              </div> -->
                                             <div>
-
-
                                                 <p>
-                                                    Sci-diet与食俱进公司致力于帮助个人建立合理膳食计划，以实现营养均衡、合理塑形等膳食目标。对于不方便自行烹饪的学生、白领等，根据具体的就餐地点、饮食需求、饮食习惯和个人身体状况，科学地给出每一餐主食及配菜的推荐，在现有条件下实现膳食最大合理化。</p>
+                                                <p>
+                                                    <font size="2.5">
 
+                                                        以健康之名，将全国高校大学生聚集起来<br>
+                                                        拒绝暴饮暴食，拒绝营养不均<br>
+                                                        拒绝肥胖死宅，拒绝熬夜修仙<br>
+                                                        让每一天、每一餐都能减肥增肌塑形美容<br>
+                                                        愿你秀颀修长而肌肉饱满<br>
+                                                        愿你神采奕奕而脚下生风<br>
+                                                        青春不可负，愿人人都是阳光下的追风少年！<br></font>
+                                                </p>
                                                 <p><span data-diameter="40" class="updating-chart">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,4,7,3,2,9,8,7,4,5,1,2,9,5,4,7,2,7,7,3,5,2</span>
                                                 </p>
                                             </div>
@@ -948,7 +947,45 @@
 
     </div>
 </div>
-
+<script>
+    function goQuestion() {
+        var id = 0;
+        id = ${goQuestion};
+        if(id!=1)
+        {
+            $.ajax({
+                type: "post",
+                url:"/removeQuestion",
+                timeout:80000,
+                dataType:"json",
+                data:{
+                },
+                success:function(data){
+                    console.log("success");
+                    console.log(${goQuestion});
+                },
+                error:function(){
+                    alert("请求出错")
+                }
+            })
+            if(id==2)
+            {
+                var r = confirm("新的一周来啦，小主是不是要为自己的饮食状况填写问卷呢？")
+                if(r==true)
+                {
+                    window.location.href="./questionnaire";
+                }
+            }
+            else {
+                var r = confirm("一周结束啦，小主是不是要看看自己的报告呢？")
+                if(r==true)
+                {
+                    window.open("https://scidiet-1252946747.cos.ap-shanghai.myqcloud.com/baogao.png");
+                }
+            }
+        }
+    }
+</script>
 <!-- Mainly scripts -->
 <script src="http://scidiet-1252946747.file.myqcloud.com/js/jquery-2.1.1.js"></script>
 <script src="http://scidiet-1252946747.file.myqcloud.com/js/bootstrap.min.js"></script>

@@ -98,7 +98,7 @@
 
                 </li>
                 <li>
-                    <a href="layouts"><i class="fa fa-diamond"></i> <span class="nav-label">品牌理念</span></a>
+                    <a href="layouts"><i class="fa fa-diamond"></i> <span class="nav-label">饮食记录</span></a>
                 </li>
                 <li>
                     <a href="recommend"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">智能推荐</span></a>
@@ -184,18 +184,15 @@
             </div>
             <div>
                 <div class="statistic-box">
-
-
                     <div class="row text-center">
                         <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
-                            <a href="layouts">
-                                <button class="btn btn-primary btn-lg">品牌理念</button>
+                            <a >
+                                <button class="btn btn-primary btn-lg"  onclick="showFirst()">饮食记录</button>
                             </a>
                         </div>
-
                         <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
-                            <a href="profile">
-                                <button class="btn btn-primary btn-lg">个人中心</button>
+                            <a >
+                                <button class="btn btn-primary btn-lg" onclick="showSecond()">我的中心</button>
                             </a>
                         </div>
                         <div style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;">
@@ -204,9 +201,41 @@
                             </a>
                         </div>
                     </div>
-
-
-                </div>
+                    <div  class="row text-center" id = "secondMenu" name = "secondMenu" hidden>
+                        <div id = "p11" style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;opacity:0">
+                            <a href="layouts">
+                                <button class="btn btn-primary btn-lg">勾选菜品</button>
+                            </a>
+                        </div>
+                        <div  id = "p21" style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;opacity:0">
+                            <a href="profile">
+                                <button class="btn btn-primary btn-lg">查看报告</button>
+                            </a>
+                        </div>
+                        <div id = "p31" style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;opacity:0">
+                            <a href="recommend">
+                                <button class="btn btn-primary btn-lg">开始选菜</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div  class="row text-center" id = "thirdMenu" name = "thirdMenu" hidden>
+                        <div id = "p12" style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;opacity:0">
+                            <a href="layouts">
+                                <button class="btn btn-primary btn-lg">问卷相关</button>
+                            </a>
+                        </div>
+                        <div  id = "p22" style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;opacity:0">
+                            <a href="profile">
+                                <button class="btn btn-primary btn-lg">个人资料</button>
+                            </a>
+                        </div>
+                        <div id = "p32" style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;opacity:0">
+                            <a href="recommend">
+                                <button class="btn btn-primary btn-lg">开始选菜</button>
+                            </a>
+                        </div>
+                    </div>
+            </div>
             </div>
 
         </div>
@@ -344,7 +373,7 @@
                         <div>
                             <div class="ibox float-e-margins">
                                 <div class="ibox-title">
-                                    <h5>公司简介</h5>
+                                    <h5>品牌理念</h5>
                                     <div class="ibox-tools">
                                         <a class="collapse-link">
                                             <i class="fa fa-chevron-up"></i>
@@ -363,23 +392,22 @@
                                         </a>
                                     </div>
                                 </div>
-
                                 <div class="ibox-content inspinia-timeline">
-
                                     <div>
                                         <div class="row">
-                                            <!--   <div class="col-xs-3 date">
-                                                  <i class="fa fa-briefcase"></i>
-                                                  6:00 am
-                                                  <br/>
-                                                  <small class="text-navy">2 hour ago</small>
-                                              </div> -->
                                             <div>
-
-
                                                 <p>
-                                                    Sci-diet与食俱进公司致力于帮助个人建立合理膳食计划，以实现营养均衡、合理塑形等膳食目标。对于不方便自行烹饪的学生、白领等，根据具体的就餐地点、饮食需求、饮食习惯和个人身体状况，科学地给出每一餐主食及配菜的推荐，在现有条件下实现膳食最大合理化。</p>
+                                                <p>
+                                                    <font size="2.5">
 
+                                                        以健康之名，将全国高校大学生聚集起来<br>
+                                                        拒绝暴饮暴食，拒绝营养不均<br>
+                                                        拒绝肥胖死宅，拒绝熬夜修仙<br>
+                                                        让每一天、每一餐都能减肥增肌塑形美容<br>
+                                                        愿你秀颀修长而肌肉饱满<br>
+                                                        愿你神采奕奕而脚下生风<br>
+                                                        青春不可负，愿人人都是阳光下的追风少年！<br></font>
+                                                </p>
                                                 <p><span data-diameter="40" class="updating-chart">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,4,7,3,2,9,8,7,4,5,1,2,9,5,4,7,2,7,7,3,5,2</span>
                                                 </p>
                                             </div>
@@ -988,6 +1016,23 @@
 <!-- Toastr -->
 <script src="http://scidiet-1252946747.file.myqcloud.com/js/plugins/toastr/toastr.min.js"></script>
 
-
+<script  type="text/JavaScript">
+    function showFirst() {
+        $("#secondMenu").show();
+        $("#thirdMenu").show();
+        document.getElementById("p11").style.opacity="100";
+        document.getElementById("p12").style.opacity="100";
+        document.getElementById("p21").style.opacity="0";
+        document.getElementById("p22").style.opacity="0";
+    }
+    function showSecond() {
+        $("#secondMenu").show();
+        $("#thirdMenu").show();
+        document.getElementById("p11").style.opacity="0";
+        document.getElementById("p12").style.opacity="0";
+        document.getElementById("p21").style.opacity="100";
+        document.getElementById("p22").style.opacity="100";
+    }
+</script>
 </body>
 </html>

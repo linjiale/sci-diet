@@ -28,13 +28,17 @@ public class PostInterceptor extends BaseInterceptor {
                 modelAndView.addObject("user",user);
                 modelAndView.addObject("userName",user.getName());
             }
-
             modelAndView.addObject("userId",userId);
             object = request.getSession().getAttribute("foodList");
             if(object==null)
                 modelAndView.addObject("legal",0);
             else
                 modelAndView.addObject("legal",1);
+            object = request.getSession().getAttribute("goQuestion");
+            int goQuestion = object==null?0: Integer.valueOf(object.toString());
+            modelAndView.addObject("goQuestion",goQuestion);
+            System.out.println("go");
+            System.out.println(goQuestion);
         }
     }
 
