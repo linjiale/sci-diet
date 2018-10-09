@@ -141,10 +141,12 @@
                     <div class="ibox float-e-margins">
                         <div class="ibox-content text-center p-md"style="line-height:24px;">
 
-                            <h2><span class="text-navy">Sci-diet</span>
+                            <h2><span class="text-navy">Vivi-young健康小管家</span>
                             </h2>
-                            <img src="/img/logo.png"width="50%">
+                            <br>
+                            <img src="https://scidiet-1252946747.cos.ap-shanghai.myqcloud.com/img/logo.png"width="50%">
                             <p>
+                                <br>
                                 <font size="2.5">
 
                                 以健康之名，将全国高校大学生聚集起来<br>
@@ -155,8 +157,7 @@
                                     愿你神采奕奕而脚下生风<br>
                                 青春不可负，愿人人都是阳光下的追风少年！<br></font>
 
-                            </p>sds
-
+                            </p>
 
                         </div>
                     </div>

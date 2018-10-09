@@ -174,12 +174,12 @@
         <div class="row  border-bottom white-bg dashboard-header">
 
             <div>
-                <h2>Sci-diet 与时俱进</h2>
+                <h2>Vivi-young 健康小管家</h2>
 
             </div>
             <div class='col-lg-12'>
 
-                <div class='demo'><img src="http://scidiet-1252946747.file.myqcloud.com/img/index.jpg" alt="主页"></div>
+                <div class='demo'><img src="https://scidiet-1252946747.cos.ap-shanghai.myqcloud.com/img/index.jpg" alt="主页"></div>
 
             </div>
             <div>
@@ -951,7 +951,7 @@
     function goQuestion() {
         var id = 0;
         id = ${goQuestion};
-        if(id!=1)
+        if(id!=0)
         {
             $.ajax({
                 type: "post",

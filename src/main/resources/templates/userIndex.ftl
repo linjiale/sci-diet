@@ -203,12 +203,12 @@
                     </div>
                     <div  class="row text-center" id = "secondMenu" name = "secondMenu" hidden>
                         <div id = "p11" style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;opacity:0">
-                            <a href="layouts">
+                            <a href="metrics">
                                 <button class="btn btn-primary btn-lg">勾选菜品</button>
                             </a>
                         </div>
                         <div  id = "p21" style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;opacity:0">
-                            <a href="profile">
+                            <a href="#" onclick="baogao()">
                                 <button class="btn btn-primary btn-lg">查看报告</button>
                             </a>
                         </div>
@@ -220,8 +220,8 @@
                     </div>
                     <div  class="row text-center" id = "thirdMenu" name = "thirdMenu" hidden>
                         <div id = "p12" style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;opacity:0">
-                            <a href="layouts">
-                                <button class="btn btn-primary btn-lg">问卷相关</button>
+                            <a href="#" >
+                                <button onclick="wenjuan()" class="btn btn-primary btn-lg">问卷相关</button>
                             </a>
                         </div>
                         <div  id = "p22" style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;opacity:0">
@@ -1032,6 +1032,12 @@
         document.getElementById("p12").style.opacity="0";
         document.getElementById("p21").style.opacity="100";
         document.getElementById("p22").style.opacity="100";
+    }
+    function wenjuan(){
+        window.location.href="./questionnaire";
+    }
+    function baogao(){
+         window.open("https://scidiet-1252946747.cos.ap-shanghai.myqcloud.com/baogao.png");
     }
 </script>
 </body>
