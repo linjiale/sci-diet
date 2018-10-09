@@ -179,7 +179,7 @@
             </div>
             <div class='col-lg-12'>
 
-                <div class='demo'><img src="http://scidiet-1252946747.file.myqcloud.com/img/index.jpg" alt="主页"></div>
+                <div class='demo'><img src="https://scidiet-1252946747.cos.ap-shanghai.myqcloud.com/img/index.jpg" alt="主页"></div>
 
             </div>
             <div>
@@ -203,7 +203,7 @@
                     </div>
                     <div  class="row text-center" id = "secondMenu" name = "secondMenu" hidden>
                         <div id = "p11" style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;opacity:0">
-                            <a href="metrics">
+                            <a href="menu">
                                 <button class="btn btn-primary btn-lg">勾选菜品</button>
                             </a>
                         </div>

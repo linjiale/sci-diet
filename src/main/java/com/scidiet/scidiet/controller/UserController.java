@@ -10,6 +10,7 @@ import com.scidiet.scidiet.mapper.UserMapper;
 import com.scidiet.scidiet.model.CanteenAdmin;
 import com.scidiet.scidiet.model.Food;
 import com.scidiet.scidiet.model.User;
+import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -318,6 +319,8 @@ public class UserController extends BaseController {
     public String getAvailable(Map<String, Object> model,
                                @RequestParam(value = "lunch") String lunch) {
         HttpSession session = servletRequest.getSession();
+        if(session.getAttribute("adminId")==null )
+            session.setAttribute("adminId",1);
         int adminId = (int) session.getAttribute("adminId");
         CanteenAdmin canteenAdmin = canteenAdminMapper.selectByPrimaryKey(adminId);
         int isDinner = lunch.equals("dinner") ? 1 : 0;
@@ -330,6 +333,20 @@ public class UserController extends BaseController {
         return "getAvailable";
     }
 
+
+    @RequestMapping(value = "/menu")
+    public String getAvailable(Map<String, Object> model) {
+        HttpSession session = servletRequest.getSession();
+        int adminId = 1;
+        CanteenAdmin canteenAdmin = canteenAdminMapper.selectByPrimaryKey(adminId);
+        int isDinner = 1;
+        session.setAttribute("isDinner", isDinner);
+        List<Food> list = foodMapper.getAllFood();
+        list = list.stream().filter(food -> (food.getLocation().equals(canteenAdmin.getLocation()) && food.getIsDinner() == isDinner)).collect(Collectors.toList());
+        model.put("list", list);
+        model.put("isDinner", isDinner);
+        return "menu";
+    }
     @RequestMapping(value = "/putResult")
     public String putResult(Map<String, Object> model,
                             @RequestParam(value = "food") String[] foods) {

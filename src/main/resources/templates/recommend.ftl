@@ -185,7 +185,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-block btn-outline btn-primary">开启智能推荐</button>
+            <button type="button" onclick=" <#if userId!=0>submit()<#else>login()</#if>" class="btn btn-block btn-outline btn-primary">开启智能推荐</button>
             </a>
         </form>
 
@@ -282,6 +282,13 @@
 
 
     });
+    function submit(){
+        this.form.submit();
+    }
+    function login() {
+        alert('请先登录');
+        window.location.href = './login';
+    }
 </script>
 </body>
 </html>
