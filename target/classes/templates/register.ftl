@@ -22,10 +22,10 @@
     <div>
         <div class="logo-name">
 
-            Sci
+            Vivi
 
         </div>
-        <h2>Register to Sci-diet</h2>
+        <h2>Register to Vivi-young</h2>
         <p>Create account to see it in action.</p>
         <form class="m-t" role="form"  >
             <div class="form-group" >

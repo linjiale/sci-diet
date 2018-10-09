@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82bcffd3-80a9-41c6-a775-bac782274001" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/scidiet/scidiet/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/scidiet/scidiet/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scidiet/scidiet/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/scidiet/scidiet/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/recommend.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/recommend.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/register.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/register.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/userIndex.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/userIndex.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/login.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/login.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/templates/recommend.ftl" afterPath="$PROJECT_DIR$/target/classes/templates/recommend.ftl" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,11 +71,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userIndex.ftl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userIndex.ftl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userIndex.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-9">
-              <caret line="205" column="41" lean-forward="false" selection-start-line="205" selection-start-column="41" selection-end-line="205" selection-end-column="41" />
+            <state relative-caret-position="99">
+              <caret line="173" column="23" lean-forward="true" selection-start-line="173" selection-start-column="23" selection-end-line="173" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1">
+              <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -101,21 +104,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
+      <file leaf-file-name="menu.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/menu.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+            <state relative-caret-position="517">
+              <caret line="118" column="36" lean-forward="false" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.ftl" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/menu.ftl">
+      <file leaf-file-name="index.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="118" column="36" lean-forward="false" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
+            <state relative-caret-position="207">
+              <caret line="176" column="20" lean-forward="true" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -141,16 +144,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/profile.ftl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="221" column="44" lean-forward="false" selection-start-line="221" selection-start-column="44" selection-end-line="221" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -163,7 +156,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>p21</find>
       <find>thirdMenu</find>
       <find>公司简介</find>
       <find>ibox float-e-margins</find>
@@ -193,6 +185,7 @@
       <find>getava</find>
       <find>get</find>
       <find>菜</find>
+      <find>welcome</find>
     </findStrings>
     <replaceStrings>
       <replace>com.scidiet.scidiet</replace>
@@ -252,7 +245,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/modify.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/test.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/metrics.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/register.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V7__20180914_ddl.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/scidiet/scidiet/model/User.java" />
@@ -265,8 +257,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/recommend.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/login.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/com/scidiet/scidiet/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/userIndex.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/menu.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/register.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/userIndex.ftl" />
       </list>
     </option>
   </component>
@@ -669,12 +662,12 @@
       <workItem from="1538740493528" duration="138000" />
       <workItem from="1538740729483" duration="983000" />
       <workItem from="1538811520443" duration="611000" />
-      <workItem from="1539090193954" duration="3360000" />
+      <workItem from="1539090193954" duration="3697000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140309000" />
+    <option name="totallyTimeSpent" value="140646000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1001,13 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scidiet/scidiet/interceptor/BaseInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1048">
@@ -1034,14 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4401">
           <caret line="163" column="104" lean-forward="false" selection-start-line="163" selection-start-column="19" selection-end-line="163" selection-end-column="104" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="181" column="44" lean-forward="false" selection-start-line="181" selection-start-column="44" selection-end-line="181" selection-end-column="113" />
           <folding />
         </state>
       </provider>
@@ -1139,14 +1117,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userIndex.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="205" column="41" lean-forward="false" selection-start-line="205" selection-start-column="41" selection-end-line="205" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scidiet/scidiet/ScidietApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1161,6 +1131,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="517">
           <caret line="118" column="36" lean-forward="false" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="176" column="20" lean-forward="true" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/userIndex.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="173" column="23" lean-forward="true" selection-start-line="173" selection-start-column="23" selection-end-line="173" selection-end-column="23" />
           <folding />
         </state>
       </provider>

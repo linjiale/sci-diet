@@ -174,7 +174,7 @@
         <div class="row  border-bottom white-bg dashboard-header">
 
             <div>
-                <h2>Sci-diet 与时俱进</h2>
+                <h2>Vivi-young 健康小管家</h2>
 
             </div>
             <div class='col-lg-12'>
