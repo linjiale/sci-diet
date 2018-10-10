@@ -366,5 +366,10 @@ public class UserController extends BaseController {
         return "chooseLunch";
     }
 
+    @RequestMapping(value = "/haibao")
+    public String haibao(Map<String, Object> model) {
+
+        return "haibao";
+    }
 
 }

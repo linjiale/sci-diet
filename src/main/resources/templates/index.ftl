@@ -980,7 +980,7 @@
                 var r = confirm("一周结束啦，小主是不是要看看自己的报告呢？")
                 if(r==true)
                 {
-                    window.open("https://scidiet-1252946747.cos.ap-shanghai.myqcloud.com/baogao.png");
+                    window.open("./haibao");
                 }
             }
         }

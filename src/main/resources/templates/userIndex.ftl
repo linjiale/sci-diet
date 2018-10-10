@@ -1037,7 +1037,7 @@
         window.location.href="./questionnaire";
     }
     function baogao(){
-         window.open("https://scidiet-1252946747.cos.ap-shanghai.myqcloud.com/baogao.png");
+         window.open("./haibao");
     }
 </script>
 </body>
