@@ -208,7 +208,7 @@
                             </a>
                         </div>
                         <div  id = "p21" style="width:33%;padding:0;margin:0;float:left;box-sizing:border-box;opacity:0">
-                            <a href="#" onclick="baogao()">
+                            <a href="#" onclick="<#if  userId == 0>login() <#else>baogao()</#if>">
                                 <button class="btn btn-primary btn-lg">查看报告</button>
                             </a>
                         </div>
@@ -1038,6 +1038,9 @@
     }
     function baogao(){
          window.open("./haibao");
+    }    function login() {
+        alert('请先登录');
+        window.location.href = './login';
     }
 </script>
 </body>
